@@ -5,4 +5,4 @@ function Eingabefeld() {
             "Herzlichen Dank, " + eingabe + ". Du bist cool :) ";
     }
 }
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=aufgabe0.js.map
