@@ -159,26 +159,26 @@ var skipiste;
             var y = 0 + Math.random() * 600;
             drawSnow(x, y, 2, 0, 2 * Math.PI, "#ffffff");
         }
-        //Funktion f�r automatische Baumgenerierungr
-        function drawTree(_x, _y, _color) {
-            crc2.fillStyle = "#cd5700";
-            crc2.fillRect(_x, _y, 20, 30);
-            crc2.beginPath();
-            crc2.moveTo(_x - 30, _y);
-            crc2.lineTo(_x + 10, _y - 100);
-            crc2.lineTo(_x + 50, _y);
-            crc2.closePath();
-            crc2.stroke();
-            crc2.fillStyle = _color;
-            crc2.fill();
-        }
-        //Funktion f�r Schneeflocken
-        function drawSnow(_x1, _y1, _radius, _start, _end, _color) {
-            crc2.beginPath();
-            crc2.arc(_x1, _y1, _radius, _start, _end);
-            crc2.fillStyle = _color;
-            crc2.fill();
-        }
+    }
+    //Funktion f�r automatische Baumgenerierungr
+    function drawTree(_x, _y, _color) {
+        crc2.fillStyle = "#cd5700";
+        crc2.fillRect(_x, _y, 20, 30);
+        crc2.beginPath();
+        crc2.moveTo(_x - 30, _y);
+        crc2.lineTo(_x + 10, _y - 100);
+        crc2.lineTo(_x + 50, _y);
+        crc2.closePath();
+        crc2.stroke();
+        crc2.fillStyle = _color;
+        crc2.fill();
+    }
+    //Funktion f�r Schneeflocken
+    function drawSnow(_x1, _y1, _radius, _start, _end, _color) {
+        crc2.beginPath();
+        crc2.arc(_x1, _y1, _radius, _start, _end);
+        crc2.fillStyle = _color;
+        crc2.fill();
     }
 })(skipiste || (skipiste = {}));
 //# sourceMappingURL=aufgabe2.js.map

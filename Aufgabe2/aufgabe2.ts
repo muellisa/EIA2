@@ -184,7 +184,7 @@ namespace skipiste {
 
             drawSnow(x, y, 2, 0, 2 * Math.PI, "#ffffff");
         }
-
+}
 
         //Funktion für automatische Baumgenerierungr
        
@@ -214,6 +214,5 @@ namespace skipiste {
             crc2.fill();
 
         }
-    
-}
+
 }
