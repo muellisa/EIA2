@@ -253,37 +253,38 @@ namespace aufgabe3 {
     // Funktion für Wolken
     function cloud(_x: number, _y: number): void {
         crc2.beginPath();
-        crc2.arc(250, 90, 30, 0, 2 * Math.PI);
-        crc2.fillStyle = "#f7f7e3";
+        crc2.arc(_x, _y, 30, 0, 2 * Math.PI);
+        crc2.fillStyle = "#C0C0C0";
         crc2.fill();
 
         crc2.beginPath();
-        crc2.arc(295, 90, 30, 0, 2 * Math.PI);
-        crc2.fillStyle = "#f7f7e3";
+        crc2.arc(_x + 45, _y, 30, 0, 2 * Math.PI);
+        crc2.fillStyle = "#C0C0C0 ";
         crc2.fill();
 
         crc2.beginPath();
-        crc2.arc(273, 70, 25, 0, 2 * Math.PI);
-        crc2.fillStyle = "#f7f7e3";
+        crc2.arc(_x + 23, _y - 20, 25, 0, 2 * Math.PI);
+        crc2.fillStyle = "#C0C0C0 ";
         crc2.fill();
         }
     
     function cloudSmall(_x: number, _y: number): void {
-        crc2.beginPath();
-        crc2.arc(675, 65, 25, 0, 2 * Math.PI);
-        crc2.fillStyle = "#f7f7e3";
+       crc2.beginPath();
+        crc2.arc(_x - 35,  _y, 25, 0, 2 * Math.PI);
+        crc2.fillStyle = "#C0C0C0 ";
         crc2.fill();
 
         crc2.beginPath();
-        crc2.arc(710, 65, 25, 0, 2 * Math.PI);
-        crc2.fillStyle = "#f7f7e3";
+        crc2.arc(_x, _y, 25, 0, 2 * Math.PI);
+        crc2.fillStyle = "#C0C0C0";
         crc2.fill();
 
         crc2.beginPath();
-        crc2.arc(693, 46, 20, 0, 2 * Math.PI);
-        crc2.fillStyle = "#f7f7e3";
+        crc2.arc(_x - 17, _y - 21, 20, 0, 2 * Math.PI);
+        crc2.fillStyle = "#C0C0C0";
         crc2.fill();
-       }
+    }
+
     
     //Funktion für Skifahrer
     function skifahrer(_x: number, _y: number): void {
@@ -310,7 +311,7 @@ namespace aufgabe3 {
         crc2.stroke();
        }
     
-      //Funktion zum animieren
+//Funktion zum animieren
     function animate(): void {
         console.log("Timeout");
         crc2.putImageData(imgData, 0, 0); //Hintergrund restaurieren

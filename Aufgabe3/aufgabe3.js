@@ -222,30 +222,30 @@ var aufgabe3;
     // Funktion f�r Wolken
     function cloud(_x, _y) {
         crc2.beginPath();
-        crc2.arc(250, 90, 30, 0, 2 * Math.PI);
-        crc2.fillStyle = "#f7f7e3";
+        crc2.arc(_x, _y, 30, 0, 2 * Math.PI);
+        crc2.fillStyle = "#C0C0C0";
         crc2.fill();
         crc2.beginPath();
-        crc2.arc(295, 90, 30, 0, 2 * Math.PI);
-        crc2.fillStyle = "#f7f7e3";
+        crc2.arc(_x + 45, _y, 30, 0, 2 * Math.PI);
+        crc2.fillStyle = "#C0C0C0 ";
         crc2.fill();
         crc2.beginPath();
-        crc2.arc(273, 70, 25, 0, 2 * Math.PI);
-        crc2.fillStyle = "#f7f7e3";
+        crc2.arc(_x + 23, _y - 20, 25, 0, 2 * Math.PI);
+        crc2.fillStyle = "#C0C0C0 ";
         crc2.fill();
     }
     function cloudSmall(_x, _y) {
         crc2.beginPath();
-        crc2.arc(675, 65, 25, 0, 2 * Math.PI);
-        crc2.fillStyle = "#f7f7e3";
+        crc2.arc(_x - 35, _y, 25, 0, 2 * Math.PI);
+        crc2.fillStyle = "#C0C0C0 ";
         crc2.fill();
         crc2.beginPath();
-        crc2.arc(710, 65, 25, 0, 2 * Math.PI);
-        crc2.fillStyle = "#f7f7e3";
+        crc2.arc(_x, _y, 25, 0, 2 * Math.PI);
+        crc2.fillStyle = "#C0C0C0";
         crc2.fill();
         crc2.beginPath();
-        crc2.arc(693, 46, 20, 0, 2 * Math.PI);
-        crc2.fillStyle = "#f7f7e3";
+        crc2.arc(_x - 17, _y - 21, 20, 0, 2 * Math.PI);
+        crc2.fillStyle = "#C0C0C0";
         crc2.fill();
     }
     //Funktion f�r Skifahrer
