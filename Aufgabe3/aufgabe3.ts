@@ -202,7 +202,7 @@ namespace aufgabe3 {
             //Skifahrer
         for (let i: number = 0; i < 1; i++) {
             skifahrerX[i] = 0;
-            skifahrerY[i] = 150;
+            skifahrerY[i] = 310;
         }
         
         //Hintergrund speichern
@@ -323,9 +323,9 @@ namespace aufgabe3 {
         for (let i: number = 0; i < skifahrerX.length; i++) {
             if (skifahrerX[i] > 800) {
                 skifahrerX[i] = 0;
-                skifahrerY[i] = 300;
+                skifahrerY[i] = 310;
             }
-            skifahrerY[i] += 3;
+            skifahrerY[i] += 2;
             skifahrerX[i] += 5;
             skifahrer(skifahrerX[i], skifahrerY[i]);
         }
