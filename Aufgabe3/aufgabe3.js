@@ -234,20 +234,6 @@ var aufgabe3;
         crc2.fillStyle = "#F0FFFF";
         crc2.fill();
     }
-    function cloudSmall(_x, _y) {
-        crc2.beginPath();
-        crc2.arc(_x - 35, _y, 25, 0, 2 * Math.PI);
-        crc2.fillStyle = "#F0FFFF";
-        crc2.fill();
-        crc2.beginPath();
-        crc2.arc(_x, _y, 25, 0, 2 * Math.PI);
-        crc2.fillStyle = "#F0FFFF";
-        crc2.fill();
-        crc2.beginPath();
-        crc2.arc(_x - 17, _y - 21, 20, 0, 2 * Math.PI);
-        crc2.fillStyle = "#F0FFFF";
-        crc2.fill();
-    }
     //Funktion f�r Skifahrer
     function skifahrer(_x, _y) {
         crc2.fillStyle = "#000000";
