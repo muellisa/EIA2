@@ -1,7 +1,9 @@
 var aufgabe3;
 (function (aufgabe3) {
+    //  EventListener h�rt auf load,Seite wird vollst�ndig geladen.Wenn Ereignis eintritt, beginnt Funktion
     window.addEventListener("load", draw);
     var crc2;
+    // Anlegzng der Arrays 
     var skifahrerX = [];
     var skifahrerY = [];
     var snowX = [];
@@ -9,6 +11,7 @@ var aufgabe3;
     var cloudX = [];
     var cloudY = [];
     var imgData;
+    // Funktion f�r den Canvas
     function draw() {
         var canvas = document.getElementsByTagName("canvas")[0];
         console.log(canvas);
@@ -167,7 +170,7 @@ var aufgabe3;
             var y = 380 + Math.random() * 180;
             drawTree(x, y, "#006200");
         }
-        // Schleifen Schnee/Skifahrer/Wolken
+        // Schleifen Schnee/Skifahrer/Wolken und Startkoordinaten
         //Schnee
         for (var i = 0; i < 800; i++) {
             snowX[i] = 0 + Math.random() * 800;

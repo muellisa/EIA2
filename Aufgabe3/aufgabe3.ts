@@ -1,7 +1,10 @@
 namespace aufgabe3 {
+    
+//  EventListener hört auf load,Seite wird vollständig geladen.Wenn Ereignis eintritt, beginnt Funktion
     window.addEventListener("load", draw);
     let crc2: CanvasRenderingContext2D;
-    
+
+    // Anlegzng der Arrays 
     let skifahrerX: number[] = [];
     let skifahrerY: number[] = [];
     let snowX: number [] = [];
@@ -11,7 +14,7 @@ namespace aufgabe3 {
     
     let imgData: ImageData;    
     
-    
+ // Funktion für den Canvas
     function draw(): void {
 
         let canvas: HTMLCanvasElement = document.getElementsByTagName("canvas")[0];
@@ -188,7 +191,7 @@ namespace aufgabe3 {
             drawTree(x, y, "#006200");
         }
 
-       // Schleifen Schnee/Skifahrer/Wolken
+       // Schleifen Schnee/Skifahrer/Wolken und Startkoordinaten
             //Schnee
         for (let i: number = 0; i < 800; i++) {
             snowX[i] = 0 + Math.random() * 800;
