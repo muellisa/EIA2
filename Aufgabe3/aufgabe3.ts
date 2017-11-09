@@ -228,7 +228,7 @@ namespace aufgabe3 {
         }
 }
 */
-        //Funktion für automatische Baumgenerierungr
+        //Funktion für automatische Baumgenerierung
        
         function drawTree(_x: number, _y: number, _color: string): void {
 

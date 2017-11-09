@@ -202,7 +202,7 @@ var aufgabe3;
       }
 }
 */
-    //Funktion f�r automatische Baumgenerierungr
+    //Funktion f�r automatische Baumgenerierung
     function drawTree(_x, _y, _color) {
         crc2.fillStyle = "#cd5700";
         crc2.fillRect(_x, _y, 20, 30);
