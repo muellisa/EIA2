@@ -1,11 +1,10 @@
-var aufgabe3;
-(function (aufgabe3) {
+var aufgabe4;
+(function (aufgabe4) {
     //  EventListener h�rt auf load,Seite wird vollst�ndig geladen.Wenn Ereignis eintritt, beginnt Funktion
     window.addEventListener("load", draw);
     var crc2;
     // Anlegzng der Arrays 
-    var skifahrerX = [];
-    var skifahrerY = [];
+    var skifahrer = [];
     var snowX = [];
     var snowY = [];
     var cloudX = [];
@@ -79,89 +78,11 @@ var aufgabe3;
         crc2.strokeStyle = "000000";
         crc2.stroke();
         crc2.fill();
-        /*
-              
-         //Baum 1
-         crc2.beginPath();
-         crc2.moveTo(130, 400);
-         crc2.lineTo(180, 400);
-         crc2.lineTo(155, 300);
-         crc2.closePath();
-         crc2.strokeStyle = "#006200";
-         crc2.stroke();
-         crc2.fillStyle = "#006200";
-         crc2.fill();
-         
-         crc2.fillStyle = "#cd5700";
-         crc2.fillRect(150, 400, 5, 7);
-       
-         
-         //Baum 2
-         crc2.beginPath();
-         crc2.moveTo(460, 300);
-         crc2.lineTo(500, 300);
-         crc2.lineTo(485, 260);
-         crc2.closePath();
-         crc2.strokeStyle = "#006200";
-         crc2.stroke();
-         crc2.fillStyle = "#006200";
-         crc2.fill();
-         
-         crc2.fillStyle = "#cd5700";
-         crc2.fillRect(480, 300, 5, 7);
-         
-         //Baum 3
-         crc2.beginPath();
-         crc2.moveTo(720, 470);
-         crc2.lineTo(690, 580);
-         crc2.lineTo(750, 580);
-         crc2.closePath();
-         crc2.strokeStyle = "#006200";
-         crc2.stroke();
-         crc2.fillStyle = "#006200";
-         crc2.fill();
-         
-         crc2.fillStyle = "#cd5700";
-         crc2.fillRect(720, 580, 5, 7);
-       */
         //Sonne
         crc2.beginPath();
         crc2.arc(800, 0, 80, 0, 2 * Math.PI);
         crc2.fillStyle = "#F7FE2E";
         crc2.fill();
-        /*
-                //Wolke1
-                crc2.beginPath();
-                crc2.arc(250, 90, 30, 0, 2 * Math.PI);
-                crc2.fillStyle = "#f7f7e3";
-                crc2.fill();
-        
-                crc2.beginPath();
-                crc2.arc(295, 90, 30, 0, 2 * Math.PI);
-                crc2.fillStyle = "#f7f7e3";
-                crc2.fill();
-        
-                crc2.beginPath();
-                crc2.arc(273, 70, 25, 0, 2 * Math.PI);
-                crc2.fillStyle = "#f7f7e3";
-                crc2.fill();
-        
-                //Wolke2
-                crc2.beginPath();
-                crc2.arc(675, 65, 25, 0, 2 * Math.PI);
-                crc2.fillStyle = "#f7f7e3";
-                crc2.fill();
-        
-                crc2.beginPath();
-                crc2.arc(710, 65, 25, 0, 2 * Math.PI);
-                crc2.fillStyle = "#f7f7e3";
-                crc2.fill();
-        
-                crc2.beginPath();
-                crc2.arc(693, 46, 20, 0, 2 * Math.PI);
-                crc2.fillStyle = "#f7f7e3";
-                crc2.fill();
-                */
         //Baum mit Funktionsaufruf
         drawTree(150, 500, "#006200");
         //B�ume zuf�llig per Schleife angeordnet
@@ -182,26 +103,20 @@ var aufgabe3;
             cloudY[i] = 130;
         }
         //Skifahrer
-        for (var i = 0; i < 1; i++) {
-            skifahrerX[i] = 0;
-            skifahrerY[i] = 310;
+        for (var i = 0; i < 3; i++) {
+            skifahrer[i] = {
+                x: 0,
+                y: 320,
+                dx: Math.random() * 1 + 1.5,
+                dy: Math.random() * 1 + 1.5,
+                color: "hsl(" + Math.random() * 360 + ",100%, 50%)"
+            };
         }
         //Hintergrund speichern
         imgData = crc2.getImageData(0, 0, canvas.width, canvas.height);
         //Funktionsaufruf 
         animate();
     }
-    /*
-      //Schneeflocken durch Zufall
-      for (let i: number = 0; i < 500; i++) {
-
-          let x: number = 0 + Math.random() * 800;
-          let y: number = 0 + Math.random() * 600;
-
-          drawSnow(x, y, 2, 0, 2 * Math.PI, "#ffffff");
-      }
-}
-*/
     //Funktion f�r automatische Baumgenerierung
     function drawTree(_x, _y, _color) {
         crc2.fillStyle = "#cd5700";
@@ -238,24 +153,26 @@ var aufgabe3;
         crc2.fill();
     }
     //Funktion f�r Skifahrer
-    function skifahrer(_x, _y) {
-        crc2.fillStyle = "#000000";
-        crc2.fillRect(_x, _y, 50, -10);
-        crc2.fillRect(_x + 10, _y - 10, 16, -40);
+    function drawAndMoveSkifahrer(_Skifahrer) {
+        _Skifahrer.x += _Skifahrer.dx * 3;
+        _Skifahrer.y += _Skifahrer.dy * 2; // Steigung
+        crc2.fillStyle = _Skifahrer.color;
+        crc2.fillRect(_Skifahrer.x, _Skifahrer.y, 50, -10);
+        crc2.fillRect(_Skifahrer.x + 10, _Skifahrer.y - 10, 16, -40);
         //Kopf
         crc2.beginPath();
-        crc2.arc(_x + 18, _y - 50, 12, 0, 2 * Math.PI);
-        crc2.fillStyle = "#000000";
+        crc2.arc(_Skifahrer.x + 18, _Skifahrer.y - 50, 12, 0, 2 * Math.PI);
+        crc2.fillStyle = _Skifahrer.color;
         crc2.fill();
-        crc2.fillStyle = "#000000";
+        crc2.fillStyle = _Skifahrer.color;
         crc2.beginPath();
-        crc2.moveTo(_x + 20, _y - 35);
-        crc2.lineTo(_x + 40, _y - 30);
+        crc2.moveTo(_Skifahrer.x + 20, _Skifahrer.y - 35);
+        crc2.lineTo(_Skifahrer.x + 40, _Skifahrer.y - 30);
         crc2.stroke();
-        crc2.fillStyle = "#000000";
+        crc2.fillStyle = _Skifahrer.color;
         crc2.beginPath();
-        crc2.moveTo(_x + 40, _y - 30);
-        crc2.lineTo(_x + 55, _y - 10);
+        crc2.moveTo(_Skifahrer.x + 40, _Skifahrer.y - 30);
+        crc2.lineTo(_Skifahrer.x + 55, _Skifahrer.y - 10);
         crc2.stroke();
     }
     //Funktion zum animieren
@@ -279,16 +196,14 @@ var aufgabe3;
             cloud(cloudX[i], cloudY[i]);
         }
         //Skifahrer
-        for (var i = 0; i < skifahrerX.length; i++) {
-            if (skifahrerX[i] > 800) {
-                skifahrerX[i] = 0;
-                skifahrerY[i] = 310;
+        for (var i = 0; i < skifahrer.length; i++) {
+            drawAndMoveSkifahrer(skifahrer[i]);
+            if (skifahrer[i].x > 800) {
+                skifahrer[i].x = 0;
+                skifahrer[i].y = 310;
             }
-            skifahrerY[i] += 2;
-            skifahrerX[i] += 5;
-            skifahrer(skifahrerX[i], skifahrerY[i]);
         }
         window.setTimeout(animate, 20); //Alle 20ms startet Funktion sich selbst neu
     }
-})(aufgabe3 || (aufgabe3 = {}));
-//# sourceMappingURL=aufgabe3.js.map
+})(aufgabe4 || (aufgabe4 = {}));
+//# sourceMappingURL=aufgabe4.js.map

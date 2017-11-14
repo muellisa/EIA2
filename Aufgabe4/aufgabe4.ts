@@ -1,12 +1,21 @@
-namespace aufgabe3 {
+namespace aufgabe4 {
     
 //  EventListener hört auf load,Seite wird vollständig geladen.Wenn Ereignis eintritt, beginnt Funktion
     window.addEventListener("load", draw);
     let crc2: CanvasRenderingContext2D;
+    
+    //Interface mit Info für Skifahrer
+    interface SkifahrerInfo {
+        x: number;
+        y: number;
+        dx: number;
+        dy: number;
+        color: string;
+        }
 
     // Anlegzng der Arrays 
-    let skifahrerX: number[] = [];
-    let skifahrerY: number[] = [];
+    let skifahrer: SkifahrerInfo[] = [];
+   
     let snowX: number [] = [];
     let snowY: number[] = [];
     let cloudX: number[] = [];
@@ -93,91 +102,13 @@ namespace aufgabe3 {
         crc2.strokeStyle = "000000";
         crc2.stroke();
         crc2.fill();
-        /*
-              
-         //Baum 1
-         crc2.beginPath();
-         crc2.moveTo(130, 400);
-         crc2.lineTo(180, 400);
-         crc2.lineTo(155, 300);
-         crc2.closePath();
-         crc2.strokeStyle = "#006200";
-         crc2.stroke();
-         crc2.fillStyle = "#006200";
-         crc2.fill();
-         
-         crc2.fillStyle = "#cd5700";
-         crc2.fillRect(150, 400, 5, 7);
-       
-         
-         //Baum 2
-         crc2.beginPath();
-         crc2.moveTo(460, 300);
-         crc2.lineTo(500, 300);
-         crc2.lineTo(485, 260);
-         crc2.closePath();
-         crc2.strokeStyle = "#006200";
-         crc2.stroke();
-         crc2.fillStyle = "#006200";
-         crc2.fill();
-         
-         crc2.fillStyle = "#cd5700";
-         crc2.fillRect(480, 300, 5, 7);
-         
-         //Baum 3
-         crc2.beginPath();
-         crc2.moveTo(720, 470);
-         crc2.lineTo(690, 580);
-         crc2.lineTo(750, 580);
-         crc2.closePath();
-         crc2.strokeStyle = "#006200";
-         crc2.stroke();
-         crc2.fillStyle = "#006200";
-         crc2.fill();
-         
-         crc2.fillStyle = "#cd5700";
-         crc2.fillRect(720, 580, 5, 7);
-       */  
-    
+  
         //Sonne
         crc2.beginPath();
         crc2.arc(800, 0, 80, 0, 2 * Math.PI);
         crc2.fillStyle = "#F7FE2E";
         crc2.fill();
         
-/*
-        //Wolke1
-        crc2.beginPath();
-        crc2.arc(250, 90, 30, 0, 2 * Math.PI);
-        crc2.fillStyle = "#f7f7e3";
-        crc2.fill();
-
-        crc2.beginPath();
-        crc2.arc(295, 90, 30, 0, 2 * Math.PI);
-        crc2.fillStyle = "#f7f7e3";
-        crc2.fill();
-
-        crc2.beginPath();
-        crc2.arc(273, 70, 25, 0, 2 * Math.PI);
-        crc2.fillStyle = "#f7f7e3";
-        crc2.fill();
-
-        //Wolke2
-        crc2.beginPath();
-        crc2.arc(675, 65, 25, 0, 2 * Math.PI);
-        crc2.fillStyle = "#f7f7e3";
-        crc2.fill();
-
-        crc2.beginPath();
-        crc2.arc(710, 65, 25, 0, 2 * Math.PI);
-        crc2.fillStyle = "#f7f7e3";
-        crc2.fill();
-
-        crc2.beginPath();
-        crc2.arc(693, 46, 20, 0, 2 * Math.PI);
-        crc2.fillStyle = "#f7f7e3";
-        crc2.fill();
-        */
 
         //Baum mit Funktionsaufruf
         drawTree(150, 500, "#006200");
@@ -203,10 +134,17 @@ namespace aufgabe3 {
             cloudY[i] = 130;
         }
             //Skifahrer
-        for (let i: number = 0; i < 1; i++) {
-            skifahrerX[i] = 0;
-            skifahrerY[i] = 310;
-        }
+        for (let i: number = 0; i < 3; i++) {
+            skifahrer[i] = {
+                x: 0,
+                y: 320,
+                dx: Math.random() * 1 + 1.5,
+                dy: Math.random() * 1 + 1.5,
+                color: "hsl(" + Math.random() * 360 + ",100%, 50%)"
+              };
+                
+            }
+        
         
         //Hintergrund speichern
         imgData = crc2.getImageData(0, 0, canvas.width, canvas.height);
@@ -215,19 +153,8 @@ namespace aufgabe3 {
         animate();
         
        }
-        
-        
-      /*  
-        //Schneeflocken durch Zufall
-        for (let i: number = 0; i < 500; i++) {
+                
 
-            let x: number = 0 + Math.random() * 800;
-            let y: number = 0 + Math.random() * 600;
-
-            drawSnow(x, y, 2, 0, 2 * Math.PI, "#ffffff");
-        }
-}
-*/
         //Funktion für automatische Baumgenerierung
        
         function drawTree(_x: number, _y: number, _color: string): void {
@@ -274,27 +201,30 @@ namespace aufgabe3 {
     
  
     //Funktion für Skifahrer
-    function skifahrer(_x: number, _y: number): void {
-        crc2.fillStyle = "#000000";
-        crc2.fillRect(_x, _y, 50, -10);
+    function drawAndMoveSkifahrer(_Skifahrer: SkifahrerInfo): void {
+        _Skifahrer.x += _Skifahrer.dx * 3;
+        _Skifahrer.y += _Skifahrer.dy * 2; // Steigung
+        
+        crc2.fillStyle = _Skifahrer.color;
+        crc2.fillRect(_Skifahrer.x, _Skifahrer.y, 50, -10);
 
-        crc2.fillRect(_x + 10, _y - 10, 16, -40);
+        crc2.fillRect(_Skifahrer.x + 10, _Skifahrer.y - 10, 16, -40);
     //Kopf
         crc2.beginPath();
-        crc2.arc(_x + 18, _y - 50, 12, 0, 2 * Math.PI);
-        crc2.fillStyle = "#000000";
+        crc2.arc(_Skifahrer.x + 18, _Skifahrer.y - 50, 12, 0, 2 * Math.PI);
+        crc2.fillStyle = _Skifahrer.color;
         crc2.fill();
 
-        crc2.fillStyle = "#000000";
+        crc2.fillStyle = _Skifahrer.color;
         crc2.beginPath();
-        crc2.moveTo(_x + 20, _y - 35);
-        crc2.lineTo(_x + 40, _y - 30);
+        crc2.moveTo(_Skifahrer.x + 20, _Skifahrer.y - 35);
+        crc2.lineTo(_Skifahrer.x + 40, _Skifahrer.y - 30);
         crc2.stroke();
 
-        crc2.fillStyle = "#000000";
+        crc2.fillStyle = _Skifahrer.color;
         crc2.beginPath();
-        crc2.moveTo(_x + 40, _y - 30);
-        crc2.lineTo(_x + 55, _y - 10);
+        crc2.moveTo(_Skifahrer.x + 40, _Skifahrer.y - 30);
+        crc2.lineTo(_Skifahrer.x + 55, _Skifahrer.y - 10);
         crc2.stroke();
        }
     
@@ -302,6 +232,7 @@ namespace aufgabe3 {
     function animate(): void {
         console.log("Timeout");
         crc2.putImageData(imgData, 0, 0); //Hintergrund restaurieren
+       
         //Schnee
         for (let i: number = 0; i < snowX.length; i++) {
             if (snowY[i] > 600) {
@@ -323,14 +254,14 @@ namespace aufgabe3 {
       
 
         //Skifahrer
-        for (let i: number = 0; i < skifahrerX.length; i++) {
-            if (skifahrerX[i] > 800) {
-                skifahrerX[i] = 0;
-                skifahrerY[i] = 310;
+        for (let i: number = 0; i < skifahrer.length; i++) {
+           
+            drawAndMoveSkifahrer(skifahrer[i]);
+            if (skifahrer[i].x > 800) {
+                skifahrer[i].x = 0;
+                skifahrer[i].y = 310;
             }
-            skifahrerY[i] += 2;
-            skifahrerX[i] += 5;
-            skifahrer(skifahrerX[i], skifahrerY[i]);
+            
             
            }
 
