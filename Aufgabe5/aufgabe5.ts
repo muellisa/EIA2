@@ -2,7 +2,6 @@ namespace Aufgabe5 {
 
     //  EventListener hört auf load,Seite wird vollständig geladen.Wenn Ereignis eintritt, beginnt Funktion
     window.addEventListener("load", draw);
-    let crc2: CanvasRenderingContext2D;
     export let crc2: CanvasRenderingContext2D;
 
     /*  //Interface mit Info für Skifahrer
@@ -148,7 +147,7 @@ namespace Aufgabe5 {
 
 
     //Funktion für automatische Baumgenerierung
-      function drawTree(_x: number, _y: number, _color: string): void {
+    function drawTree(_x: number, _y: number, _color: string): void {
 
         crc2.fillStyle = "#cd5700";
         crc2.fillRect(_x, _y, 20, 30);
