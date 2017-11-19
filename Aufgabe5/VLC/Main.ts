@@ -31,7 +31,7 @@ namespace L05_Class {
         square.update();
         
               for (let i: number = 0; i < squares.length; i++) {
-                  let s: Square = squares[i];
+                   let s: Square = squares[i];
                     s.update();
                 }
         
