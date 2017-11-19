@@ -4,15 +4,6 @@ namespace Aufgabe5 {
     window.addEventListener("load", draw);
     export let crc2: CanvasRenderingContext2D;
 
-    /*  //Interface mit Info für Skifahrer
-      interface SkifahrerInfo {
-          x: number;
-          y: number;
-          dx: number;
-          dy: number;
-          color: string;
-          }*/
-
     // Anlegung der Arrays 
     let skifahrer: Skifahrer[] = []; // arrays von Typ Klasse
     let cloud: Cloud[] = [];
@@ -161,63 +152,7 @@ namespace Aufgabe5 {
         crc2.fillStyle = _color;
         crc2.fill();
     }
-    /*
-            //Funktion für Schneeflocken
-            function drawSnow(_x1: number, _y1: number ): void {
-    
-                crc2.beginPath();
-                crc2.arc(_x1, _y1, 2, 0, 2 * Math.PI);
-                crc2.fillStyle = "#FFFFFF";
-                crc2.fill();
-            }
-    
-        // Funktion für Wolken
-        function cloud(_x: number, _y: number): void {
-            crc2.beginPath();
-            crc2.arc(_x, _y, 30, 0, 2 * Math.PI);
-            crc2.fillStyle = "#F0FFFF";
-            crc2.fill();
-    
-            crc2.beginPath();
-            crc2.arc(_x + 45, _y, 30, 0, 2 * Math.PI);
-            crc2.fillStyle = "#F0FFFF";
-            crc2.fill();
-    
-            crc2.beginPath();
-            crc2.arc(_x + 23, _y - 20, 25, 0, 2 * Math.PI);
-            crc2.fillStyle = "#F0FFFF";
-            crc2.fill();
-            }
-        
-     
-        //Funktion für Skifahrer
-        function drawAndMoveSkifahrer(_Skifahrer: SkifahrerInfo): void {
-            _Skifahrer.x += _Skifahrer.dx * 3;
-            _Skifahrer.y += _Skifahrer.dy * 2; // Steigung
-            
-            crc2.fillStyle = _Skifahrer.color;
-            crc2.fillRect(_Skifahrer.x, _Skifahrer.y, 50, -10);
-    
-            crc2.fillRect(_Skifahrer.x + 10, _Skifahrer.y - 10, 16, -40);
-        //Kopf
-            crc2.beginPath();
-            crc2.arc(_Skifahrer.x + 18, _Skifahrer.y - 50, 12, 0, 2 * Math.PI);
-            crc2.fillStyle = _Skifahrer.color;
-            crc2.fill();
-    
-            crc2.fillStyle = _Skifahrer.color;
-            crc2.beginPath();
-            crc2.moveTo(_Skifahrer.x + 20, _Skifahrer.y - 35);
-            crc2.lineTo(_Skifahrer.x + 40, _Skifahrer.y - 30);
-            crc2.stroke();
-    
-            crc2.fillStyle = _Skifahrer.color;
-            crc2.beginPath();
-            crc2.moveTo(_Skifahrer.x + 40, _Skifahrer.y - 30);
-            crc2.lineTo(_Skifahrer.x + 55, _Skifahrer.y - 10);
-            crc2.stroke();
-           }
-        */
+
     //Funktion zum animieren
     function animate(): void {
         console.log("Timeout");
