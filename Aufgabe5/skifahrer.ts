@@ -31,7 +31,7 @@ namespace Aufgabe5 {
         move(): void {
             if (this.x > 800) {
                 this.x = 0;
-                this.y = 320;
+                this.y = 340;
             }
 
             this.x += this.dx;

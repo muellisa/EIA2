@@ -25,7 +25,7 @@ var Aufgabe5;
         Skifahrer.prototype.move = function () {
             if (this.x > 800) {
                 this.x = 0;
-                this.y = 320;
+                this.y = 340;
             }
             this.x += this.dx;
             this.y += this.dy;
