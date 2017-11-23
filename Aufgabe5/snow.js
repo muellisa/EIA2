@@ -5,6 +5,8 @@
 var Aufgabe5;
 (function (Aufgabe5) {
     var Snow = (function () {
+        /*new ruft constructor methode auf somit kann beim Konstruieren des Objektes
+         Informationen uebergeben werden*/
         function Snow(_x, _y) {
             this.x = _x + Math.random() * 800;
             this.y = _y + Math.random() * 600;

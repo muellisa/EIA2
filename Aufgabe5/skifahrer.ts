@@ -9,7 +9,8 @@ namespace Aufgabe5 {
         dx: number;
         dy: number;
         color: string;
-
+/*new ruft constructor methode auf somit kann beim Konstruieren des Objektes 
+        Informationen uebergeben werden*/
         constructor(_x: number, _y: number) {
             this.x = _x;
             this.y = _y;
@@ -21,7 +22,7 @@ namespace Aufgabe5 {
         sayHello(): void {
             console.log("Hallo Skifahrer");
         }
-
+/* this verweist auf die Eigenschaften und Methoden eines Objektes */
         update(): void {
             this.move();
             this.draw();
@@ -30,7 +31,7 @@ namespace Aufgabe5 {
         move(): void {
             if (this.x > 800) {
                 this.x = 0;
-                this.y = 150;
+                this.y = 320;
             }
 
             this.x += this.dx;

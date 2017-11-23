@@ -5,6 +5,8 @@
 var Aufgabe5;
 (function (Aufgabe5) {
     var Skifahrer = (function () {
+        /*new ruft constructor methode auf somit kann beim Konstruieren des Objektes
+                Informationen uebergeben werden*/
         function Skifahrer(_x, _y) {
             this.x = _x;
             this.y = _y;
@@ -15,6 +17,7 @@ var Aufgabe5;
         Skifahrer.prototype.sayHello = function () {
             console.log("Hallo Skifahrer");
         };
+        /* this verweist auf die Eigenschaften und Methoden eines Objektes */
         Skifahrer.prototype.update = function () {
             this.move();
             this.draw();
@@ -22,7 +25,7 @@ var Aufgabe5;
         Skifahrer.prototype.move = function () {
             if (this.x > 800) {
                 this.x = 0;
-                this.y = 150;
+                this.y = 320;
             }
             this.x += this.dx;
             this.y += this.dy;

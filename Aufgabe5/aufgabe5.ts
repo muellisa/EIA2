@@ -116,7 +116,7 @@ namespace Aufgabe5 {
         for (let i: number = 0; i < 800; i++) {
             snow[i] = new Snow(0, 0); //new ruft constructor auf // Neue Instanz einer Klasse wwird erstellt
         }
-        //Wolken
+        //Wolken & new neues Objekt der Klasse wird eryeugt
         for (let i: number = 0; i < 2; i++) {
             cloud[i] = new Cloud(0 + Math.random() * 800, 130);
 

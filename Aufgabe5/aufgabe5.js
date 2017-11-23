@@ -93,7 +93,7 @@ var Aufgabe5;
         for (var i = 0; i < 800; i++) {
             snow[i] = new Aufgabe5.Snow(0, 0); //new ruft constructor auf // Neue Instanz einer Klasse wwird erstellt
         }
-        //Wolken
+        //Wolken & new neues Objekt der Klasse wird eryeugt
         for (var i = 0; i < 2; i++) {
             cloud[i] = new Aufgabe5.Cloud(0 + Math.random() * 800, 130);
         }
