@@ -8,7 +8,8 @@ namespace Aufgabe5 {
         y: number;
         color: string;
         g: number;
-
+/*new ruft constructor methode auf somit kann beim Konstruieren des Objektes 
+         Informationen uebergeben werden*/
         constructor(_x: number, _y: number) {
             this.x = _x;
             this.y = _y;

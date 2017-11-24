@@ -5,6 +5,8 @@
 var Aufgabe5;
 (function (Aufgabe5) {
     var Cloud = (function () {
+        /*new ruft constructor methode auf somit kann beim Konstruieren des Objektes
+                 Informationen uebergeben werden*/
         function Cloud(_x, _y) {
             this.x = _x;
             this.y = _y;
