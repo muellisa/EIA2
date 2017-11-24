@@ -178,6 +178,7 @@ namespace Aufgabe5 {
             s.update(); // Move and Draw aufrufen
 
         }
+     
 
         window.setTimeout(animate, 20); //Alle 20ms startet Funktion sich selbst neu
     }
