@@ -231,19 +231,19 @@ namespace Aufgabe10 {
         korb.style.height = "auto";
         korb.style.backgroundColor = "#0080c0";
         korb.innerHTML = "<span class='wk'>Warenkorb</span><hr>";
-        korb.innerHTML += "" + basketBaumart[0] + " " + basketBaumart[1] + "€ <br>";
-        korb.innerHTML += "Weihnachtsbaumständer: " + basketHalter[0] + " " + basketHalter[1] + "€<br>";
-        korb.innerHTML += "" + basketLightning[0] + " " + basketLightning[1] + "€ <br>";
-        korb.innerHTML += " " + basketDeliveryOptions[0] + " " + basketDeliveryOptions[1] + "€ <br>";
+        korb.innerHTML += "" + basketBaumart[0] + " " + basketBaumart[1] + "Euro <br>";
+        korb.innerHTML += "Weihnachtsbaumständer: " + basketHalter[0] + " " + basketHalter[1] + "Euro<br>";
+        korb.innerHTML += "" + basketLightning[0] + " " + basketLightning[1] + "Euro <br>";
+        korb.innerHTML += " " + basketDeliveryOptions[0] + " " + basketDeliveryOptions[1] + "Euro <br>";
 
         gesamtpreis = parseFloat(basketBaumart[1]) + parseFloat(basketHalter[1]) + parseFloat(basketDeliveryOptions[1]);
         for (let i: number = 0; i < stepper.length; i++) {
             if (checkBoxes[i] != null && checkBoxes[i].checked == true) {
                 gesamtpreis += parseFloat(basketSchmuck[i][1]);
-                korb.innerHTML += "" + basketSchmuck[i][0] + " " + basketSchmuck[i][1] + "€ <br>";
+                korb.innerHTML += "" + basketSchmuck[i][0] + " " + basketSchmuck[i][1] + "Euro <br>";
             }
         }
-        korb.innerHTML += "<hr> Gesamtpreis: " + Math.round(gesamtpreis * 100) / 100 + "€";
+        korb.innerHTML += "<hr> Gesamtpreis: " + Math.round(gesamtpreis * 100) / 100 + "Euro";
     }
 
 
