@@ -38,7 +38,7 @@ namespace Aufgabe10 {
             }
         }
 
-        //Halterung:
+        //Baumständer:
         let halterung: HTMLDivElement = <HTMLDivElement>document.getElementById("halterung");
         for (let i: number = 0; i < posten.length; i++) {
             if (posten[i].art == "Halter") {
@@ -117,7 +117,7 @@ namespace Aufgabe10 {
         street = document.createElement("input");
         street.type = "text";
         street.name = "DatenStrasse";
-        street.placeholder = "Straße";
+        street.placeholder = "Strasse";
         street.pattern = "[a-zA-Z]{1,}";
         street.required = true;
         daten.appendChild(street);

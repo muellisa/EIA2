@@ -34,7 +34,7 @@ var Aufgabe10;
                 selectBox.appendChild(opt);
             }
         }
-        //Halterung:
+        //Baumst�nder:
         var halterung = document.getElementById("halterung");
         for (var i = 0; i < Aufgabe10.posten.length; i++) {
             if (Aufgabe10.posten[i].art == "Halter") {
@@ -105,7 +105,7 @@ var Aufgabe10;
         street = document.createElement("input");
         street.type = "text";
         street.name = "DatenStrasse";
-        street.placeholder = "Stra�e";
+        street.placeholder = "Strasse";
         street.pattern = "[a-zA-Z]{1,}";
         street.required = true;
         daten.appendChild(street);
