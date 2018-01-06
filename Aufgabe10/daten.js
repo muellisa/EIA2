@@ -5,13 +5,13 @@
 var Aufgabe10;
 (function (Aufgabe10) {
     Aufgabe10.posten = [
-        { art: "Baumart", name: "Nordmanntanne", price: 31.55 },
-        { art: "Baumart", name: "Blaufichte", price: 48.36 },
+        { art: "Baumart", name: "Nordmanntanne", price: 30.00 },
+        { art: "Baumart", name: "Blaufichte", price: 48.50 },
         { art: "Baumart", name: "Fichte", price: 29.99 },
         { art: "Baumart", name: "Kiefer", price: 56.84 },
         { art: "Halter", name: "schwarz", price: 15.99 },
         { art: "Halter", name: "gold", price: 24.63 },
-        { art: "Halter", name: "silber", price: 20.47 },
+        { art: "Halter", name: "silber", price: 24.99 },
         { art: "Halter", name: "grau", price: 8.68 },
         { art: "lightning", name: "Lichterkette", price: 31.55 },
         { art: "lightning", name: "Kerzen", price: 22.85 },

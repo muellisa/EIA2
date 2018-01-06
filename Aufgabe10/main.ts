@@ -232,7 +232,7 @@ namespace Aufgabe10 {
         korb.style.backgroundColor = "#0080c0";
         korb.innerHTML = "<span class='wk'>Warenkorb</span><hr>";
         korb.innerHTML += "" + basketBaumart[0] + " " + basketBaumart[1] + "€ <br>";
-        korb.innerHTML += "Weihnachtsbaumständer: " + basketHalter[0] + " " + basketHalter[1] + "€ <br>";
+        korb.innerHTML += "Weihnachtsbaumständer: " + basketHalter[0] + " " + basketHalter[1] + "€<br>";
         korb.innerHTML += "" + basketLightning[0] + " " + basketLightning[1] + "€ <br>";
         korb.innerHTML += " " + basketDeliveryOptions[0] + " " + basketDeliveryOptions[1] + "€ <br>";
 
