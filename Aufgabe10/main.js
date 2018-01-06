@@ -221,7 +221,7 @@ var Aufgabe10;
         var feedback = document.createElement("div");
         feedback.style.paddingBottom = "1em";
         if (name.checkValidity() == false || street.checkValidity() == false || hNr.checkValidity() == false || ort.checkValidity() == false || plz.checkValidity() == false || mail.checkValidity() == false) {
-            feedback.innerText = "Info zu deiner Bestellung: Du scheinst Deine Daten nicht korrekt angegeben zu haben. Bitte �berpr�fe sie nocheinmal.";
+            feedback.innerText = "Info zu deiner Bestellung: Bitte �berpr�fe Deine Eingabe.";
             feedback.style.color = "red";
             document.body.appendChild(feedback);
         }

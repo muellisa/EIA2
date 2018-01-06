@@ -251,7 +251,7 @@ namespace Aufgabe10 {
         let feedback: HTMLDivElement = document.createElement("div");
         feedback.style.paddingBottom = "1em";
         if (name.checkValidity() == false || street.checkValidity() == false || hNr.checkValidity() == false || ort.checkValidity() == false || plz.checkValidity() == false || mail.checkValidity() == false) {
-            feedback.innerText = "Info zu deiner Bestellung: Du scheinst Deine Daten nicht korrekt angegeben zu haben. Bitte überprüfe sie nocheinmal.";
+            feedback.innerText = "Info zu deiner Bestellung: Bitte überprüfe Deine Eingabe.";
             feedback.style.color = "red";
             document.body.appendChild(feedback);
         }
