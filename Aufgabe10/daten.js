@@ -1,4 +1,4 @@
-/* Name:Isabell M�ller
+/* Name:Isabell Müller
      Matrikel:256034
      Datum:06.01.17
      Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und nicht diktiert.*/

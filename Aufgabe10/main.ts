@@ -1,4 +1,4 @@
-/* Name:Isabell M�ller
+/* Name:Isabell Müller
      Matrikel:256034
      Datum:06.01.17
      Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und nicht diktiert.*/
@@ -38,7 +38,7 @@ namespace Aufgabe10 {
             }
         }
 
-        //Baumst�nder:
+        //Baumständer:
         let halterung: HTMLDivElement = <HTMLDivElement>document.getElementById("halterung");
         for (let i: number = 0; i < posten.length; i++) {
             if (posten[i].sort == "Halter") {
@@ -57,7 +57,7 @@ namespace Aufgabe10 {
             }
         }
 
-        //Beleuchtung:
+        //Beleuchtuns:
         let lightning: HTMLDivElement = <HTMLDivElement>document.getElementById("lightning");
         let selectBox2: HTMLSelectElement = document.createElement("select");
         selectBox2.name = "SelectLightning";
@@ -246,7 +246,7 @@ namespace Aufgabe10 {
         korb.innerHTML += "<hr> Gesamtpreis: " + Math.round(gesamtpreis * 100) / 100 + "Euro";
     }
 
-
+//Feedback zur Eingabe
     function handleMouseDown(_event: MouseEvent): void {
         let feedback: HTMLDivElement = document.createElement("div");
         feedback.style.paddingBottom = "1em";

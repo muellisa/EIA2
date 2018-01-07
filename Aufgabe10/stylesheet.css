@@ -7,23 +7,29 @@ body {
 	float: left;
 	font-family: "Helvetica";
 	color: black;
-	font-size: 1em;
+	font-size: 0.9em;
 	width: 100%;
-	margin-left: 4em;
+	margin-left: 2em;
+}
+#einleitung {
+	width:55%;
+	font-family: 'Pacifico', cursive;
+	border: 0.1em dotted #80ffff;
 }
 #uebersicht {
 	width:55%;
+	border: 0.1em dotted #0080c0;
 }
 #bestellen{
 	width:100%;
 }
 h1 {
 	color: #0080c0;
-	font-size: 1.5em;
-}
+	font-size: 2em;
+	}
 
 h2 {
-	font-size: 1.2em;
+	font-size: 0.9em;
 }
 
 input:invalid {
@@ -50,7 +56,7 @@ button {
 }
 #daten input {
 	display: block;
-	height: 10%;
+	height: 20%;
 	width: 15%;
 }
 
@@ -64,5 +70,5 @@ button {
 }
 
 .wk {
-	font-size: 1.2em;
+	font-size: 1em;
 }

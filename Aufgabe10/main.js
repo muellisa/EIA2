@@ -1,4 +1,4 @@
-/* Name:Isabell M�ller
+/* Name:Isabell Müller
      Matrikel:256034
      Datum:06.01.17
      Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und nicht diktiert.*/
@@ -34,7 +34,7 @@ var Aufgabe10;
                 selectBox.appendChild(opt);
             }
         }
-        //Baumst�nder:
+        //Baumständer:
         var halterung = document.getElementById("halterung");
         for (var i = 0; i < Aufgabe10.posten.length; i++) {
             if (Aufgabe10.posten[i].sort == "Halter") {
@@ -51,7 +51,7 @@ var Aufgabe10;
                 halterung.appendChild(label);
             }
         }
-        //Beleuchtung:
+        //Beleuchtuns:
         var lightning = document.getElementById("lightning");
         var selectBox2 = document.createElement("select");
         selectBox2.name = "SelectLightning";
@@ -217,6 +217,7 @@ var Aufgabe10;
         }
         korb.innerHTML += "<hr> Gesamtpreis: " + Math.round(gesamtpreis * 100) / 100 + "Euro";
     }
+    //Feedback zur Eingabe
     function handleMouseDown(_event) {
         var feedback = document.createElement("div");
         feedback.style.paddingBottom = "1em";
