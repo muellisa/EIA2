@@ -1,4 +1,4 @@
-/* Name:Isabell Müller
+/* Name:Isabell Mï¿½ller
      Matrikel:256034
      Datum:06.01.17
      Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und nicht diktiert.*/
@@ -17,10 +17,10 @@ namespace Aufgabe10 {
     var label: HTMLLabelElement;
 
     var basketBaumart: string[] = [bA[0][0], "" + bA[0][1]];
-    var basketHalter: string[] = ["kein Ständer ausgewählt", "0"];
+    var basketHalter: string[] = ["kein StÃ¤nder ausgewÃ¤hlt", "0"];
     var basketLightning: string[] = [b[0][0], "" + b[0][1]];
     var basketSchmuck: string[][] = [];
-    var basketDeliveryOptions: string[] = ["keine Lieferoption ausgewählt", "0"];
+    var basketDeliveryOptions: string[] = ["keine Lieferoption ausgewÃ¤hlt", "0"];
 
     function createElements(): void {
         //Baumart:
@@ -30,7 +30,7 @@ namespace Aufgabe10 {
         selectBox.id = "selectBaumart";
         baumart.appendChild(selectBox);
         for (let i: number = 0; i < posten.length; i++) {
-            if (posten[i].art == "Baumart") {
+            if (posten[i].sort == "Baumart") {
                 var opt: HTMLElement = document.createElement("option");
                 opt.innerText = posten[i].name;
                 opt.id = "option" + i;
@@ -38,10 +38,10 @@ namespace Aufgabe10 {
             }
         }
 
-        //Baumständer:
+        //Baumstï¿½nder:
         let halterung: HTMLDivElement = <HTMLDivElement>document.getElementById("halterung");
         for (let i: number = 0; i < posten.length; i++) {
-            if (posten[i].art == "Halter") {
+            if (posten[i].sort == "Halter") {
                 var radioB: HTMLInputElement = document.createElement("input");
                 radioB.type = "radio";
                 radioB.name = "radioGroupHalterung";
@@ -65,7 +65,7 @@ namespace Aufgabe10 {
         lightning.appendChild(selectBox2);
         for (let i: number = 0; i < posten.length; i++) {
 
-            if (posten[i].art == "lightning") {
+            if (posten[i].sort == "lightning") {
                 var opt2: HTMLElement = document.createElement("option");
                 opt2.innerText = posten[i].name;
                 opt2.id = "option2." + i;
@@ -76,7 +76,7 @@ namespace Aufgabe10 {
         //Schmuckartikel:
         let schmuckartikel: HTMLDivElement = <HTMLDivElement>document.getElementById("schmuckartikel");
         for (let i: number = 0; i < posten.length; i++) {
-            if (posten[i].art == "Schmuck") {
+            if (posten[i].sort == "Schmuck") {
                 var checkB: HTMLInputElement = document.createElement("input");
                 checkB.type = "checkbox";
                 checkB.name = "CheckboxSchmuckartikel";
@@ -164,7 +164,7 @@ namespace Aufgabe10 {
         //Lieferoptionen:
         let deliveryOptions: HTMLDivElement = <HTMLDivElement>document.getElementById("deliveryOptions");
         for (let i: number = 0; i < posten.length; i++) {
-            if (posten[i].art == "Lieferung") {
+            if (posten[i].sort == "Lieferung") {
                 var radioB2: HTMLInputElement = document.createElement("input");
                 radioB2.type = "radio";
                 radioB2.name = "radioGroupLieferoptionen";
@@ -185,7 +185,7 @@ namespace Aufgabe10 {
         let submit: HTMLButtonElement = document.createElement("button");
         submit.name = "Button";
         submit.type = "button";
-        submit.innerText = "Bestellung überprüfen";
+        submit.innerText = "Bestellung Ã¼berprÃ¼fen";
         submit.addEventListener("mousedown", handleMouseDown);
         button.appendChild(submit);
     }
@@ -197,7 +197,7 @@ namespace Aufgabe10 {
         let gesamtpreis: number = 0;
 
         for (let i: number = 0; i < posten.length; i++) {
-            if (posten[i].art == "Schmuck") {
+            if (posten[i].sort == "Schmuck") {
                 stepper[i] = <HTMLInputElement>document.getElementById("stepper" + i);
                 checkBoxes[i] = <HTMLInputElement>document.getElementById("check" + i);
             }
@@ -227,12 +227,12 @@ namespace Aufgabe10 {
         }
         
         let korb: HTMLDivElement = <HTMLDivElement>document.getElementById("zusammenfassung");
-        korb.style.width = "25%";
+        korb.style.width = "35%";
         korb.style.height = "auto";
         korb.style.backgroundColor = "#0080c0";
         korb.innerHTML = "<span class='wk'>Warenkorb</span><hr>";
         korb.innerHTML += "" + basketBaumart[0] + " " + basketBaumart[1] + "Euro <br>";
-        korb.innerHTML += "Weihnachtsbaumständer: " + basketHalter[0] + " " + basketHalter[1] + "Euro<br>";
+        korb.innerHTML += "WeihnachtsbaumstÃ¤nder: " + basketHalter[0] + " " + basketHalter[1] + "Euro<br>";
         korb.innerHTML += "" + basketLightning[0] + " " + basketLightning[1] + "Euro <br>";
         korb.innerHTML += " " + basketDeliveryOptions[0] + " " + basketDeliveryOptions[1] + "Euro <br>";
 
@@ -251,7 +251,7 @@ namespace Aufgabe10 {
         let feedback: HTMLDivElement = document.createElement("div");
         feedback.style.paddingBottom = "1em";
         if (name.checkValidity() == false || street.checkValidity() == false || hNr.checkValidity() == false || ort.checkValidity() == false || plz.checkValidity() == false || mail.checkValidity() == false) {
-            feedback.innerText = "Info zu deiner Bestellung: Bitte überprüfe Deine Eingabe.";
+            feedback.innerText = "Info zu deiner Bestellung: Bitte Ã¼berprÃ¼fe Deine Eingabe.";
             feedback.style.color = "red";
             document.body.appendChild(feedback);
         }

@@ -11,10 +11,15 @@ body {
 	width: 100%;
 	margin-left: 4em;
 }
-
+#uebersicht {
+	width:55%;
+}
+#bestellen{
+	width:100%;
+}
 h1 {
 	color: #0080c0;
-	font-size: 2em;
+	font-size: 1.5em;
 }
 
 h2 {
@@ -36,7 +41,7 @@ input {
 button {
 	background-color: #0000a0;
 	color: white;
-    padding: 0.3em;
+    padding: 0.5em;
     text-align: center;
     display: inline-block;
     font-size: 1em;
@@ -55,7 +60,7 @@ button {
 	top: 0em;
 	color: white;
 	padding: 1em;
-	border: dotted 0.3em white;
+	border: 0.3em white;
 }
 
 .wk {
