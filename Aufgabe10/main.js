@@ -200,7 +200,7 @@ var Aufgabe10;
             }
         }
         var korb = document.getElementById("zusammenfassung");
-        korb.style.width = "35%";
+        korb.style.width = "30%";
         korb.style.height = "auto";
         korb.style.backgroundColor = "#0080c0";
         korb.innerHTML = "<span class='wk'>Warenkorb</span><hr>";
