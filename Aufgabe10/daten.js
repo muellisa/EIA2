@@ -5,6 +5,7 @@
 var Aufgabe10;
 (function (Aufgabe10) {
     Aufgabe10.posten = [
+        //Array vom Typen des Interface befüllt
         { sort: "Baumart", name: "Nordmanntanne", price: 30.00 },
         { sort: "Baumart", name: "Blaufichte", price: 48.50 },
         { sort: "Baumart", name: "Fichte", price: 29.99 },
@@ -31,10 +32,17 @@ var Aufgabe10;
         { sort: "Lieferung", name: "Standard-Lieferung", price: 0.0 },
         { sort: "Lieferung", name: "Express-Lieferung", price: 4.99 }
     ];
+    //Globale Variablen, 
     Aufgabe10.bA = [];
+    //Variable bA homogenes Assoziatives Array vom datentyp String
+    //"eine Schublade mit 2 Unterschubladen"
     Aufgabe10.b = [];
+    //Variable b homogenes Assoziatives Array vom datentyp String
+    //"eine Schublade mit 2 Unterschubladen"
     for (var i = 0; i < Aufgabe10.posten.length; i++) {
+        //Start bei i=0, Abbruch nach Ende des Arrays,zählt immer um 1 hoch 
         if (Aufgabe10.posten[i].sort == "Baumart") {
+            // var Temp wird in bA eingeschoben
             var temp = [Aufgabe10.posten[i].name, Aufgabe10.posten[i].price];
             Aufgabe10.bA.push(temp);
         }

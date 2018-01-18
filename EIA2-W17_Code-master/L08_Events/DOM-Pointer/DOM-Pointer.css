@@ -1,0 +1,9 @@
+div.DOM-Pointer {
+	position: fixed;
+	left:100px;
+	top:0px;
+	background-color: hsla(30, 100%, 80%,0.9);
+    box-shadow:8px 8px 8px #666;
+	border-style: solid;
+	padding: 5px;
+}
