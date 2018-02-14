@@ -1,30 +1,32 @@
 var Abschlussaufgabe;
 (function (Abschlussaufgabe) {
-    var canvas;
-    var ctx;
-    var image;
-    var crc2;
-    function main() {
-        initCanvas();
+    //  EventListener h�rt auf load,Seite wird vollst�ndig geladen.Wenn Ereignis eintritt, beginnt Funktion
+    window.addEventListener("load", draw);
+    var turtle = [];
+    var imgData;
+    // Funktion f�r den Canvas
+    function draw() {
+        var canvas = document.getElementsByTagName("canvas")[0];
+        console.log(canvas);
+        Abschlussaufgabe.crc2 = canvas.getContext("2d");
+        console.log(Abschlussaufgabe.crc2);
+        //Skifahrer
+        for (var i = 0; i < 1; i++) {
+            turtle[i] = new Abschlussaufgabe.Turtle(0, 50);
+        }
+        //Hintergrund speichern
+        imgData = Abschlussaufgabe.crc2.getImageData(0, 0, canvas.width, canvas.height);
+        //Funktionsaufruf
+        animate();
     }
-    // canvas zeichnen
-    function initCanvas() {
-        canvas = document.getElementById('canvas');
-        ctx = canvas.getContext('2d');
-        image = document.getElementById('background');
-        ctx.drawImage(image, 0, 0); // Parameter: Bildreferenz, x, y
-        //Berg Nummer 1
-        crc2.beginPath();
-        crc2.moveTo(140, 600);
-        crc2.lineTo(400, 140);
-        crc2.lineTo(700, 600);
-        crc2.closePath();
-        crc2.strokeStyle = "#c2c2c2";
-        crc2.stroke();
-        crc2.fillStyle = "#c2c2c2";
-        crc2.fill();
+    function animate() {
+        console.log("Timeout");
+        //Schildkr�te
+        for (var i = 0; i < turtle.length; i++) {
+            var s = turtle[i];
+            s.update(); // Move and Draw aufrufen
+        }
     }
-    // Main ausf�hren, sobald DOM Inhalte geladen sind;
-    document.addEventListener('DOMContentLoaded', main);
+    window.setTimeout(animate, 20); //Alle 20ms startet Funktion sich selbst neu*/
 })(Abschlussaufgabe || (Abschlussaufgabe = {}));
 //# sourceMappingURL=abschlussaufgabe.js.map

@@ -1,40 +1,48 @@
 namespace Abschlussaufgabe {
+    //  EventListener hört auf load,Seite wird vollständig geladen.Wenn Ereignis eintritt, beginnt Funktion
 
-    let canvas: HTMLCanvasElement;
-    let ctx: any;
-    let image: HTMLImageElement;
-    let crc2: CanvasRenderingContext2D;
+    window.addEventListener("load", draw);
+    export let crc2: CanvasRenderingContext2D;
 
-    function main(): void {
-        initCanvas();
+    let turtle: Turtle[] = [];
+    let imgData: ImageData;
 
+    // Funktion für den Canvas
+    function draw(): void {
 
+        let canvas: HTMLCanvasElement = document.getElementsByTagName("canvas")[0];
+        console.log(canvas);
 
-    }
+        crc2 = canvas.getContext("2d");
+        console.log(crc2);
 
-    // canvas zeichnen
-    function initCanvas(): void {
+        //Skifahrer
+        for (let i: number = 0; i < 1; i++) {
+            turtle[i] = new Turtle(0, 50);
 
-        canvas = <HTMLCanvasElement>document.getElementById('canvas');
-        ctx = canvas.getContext('2d');
-        image = <HTMLImageElement>document.getElementById('background');
+        }
 
-        ctx.drawImage(image, 0, 0); // Parameter: Bildreferenz, x, y
+        //Hintergrund speichern
+        imgData = crc2.getImageData(0, 0, canvas.width, canvas.height);
 
-
-        //Berg Nummer 1
-        crc2.beginPath();
-        crc2.moveTo(140, 600);
-        crc2.lineTo(400, 140);
-        crc2.lineTo(700, 600);
-        crc2.closePath();
-        crc2.strokeStyle = "#c2c2c2";
-        crc2.stroke();
-        crc2.fillStyle = "#c2c2c2";
-        crc2.fill();
+        //Funktionsaufruf
+        animate();
 
     }
 
-    // Main ausführen, sobald DOM Inhalte geladen sind;
-    document.addEventListener('DOMContentLoaded', main);
+    function animate(): void {
+        console.log("Timeout");
+
+
+
+        //Schildkröte
+        for (let i: number = 0; i < turtle.length; i++) {
+            let s: Turtle = turtle[i];
+            s.update(); // Move and Draw aufrufen
+
+        }
+    }
+
+
+    window.setTimeout(animate, 20); //Alle 20ms startet Funktion sich selbst neu*/
 }
