@@ -10,7 +10,7 @@ var Abschlussaufgabe;
         console.log(canvas);
         Abschlussaufgabe.crc2 = canvas.getContext("2d");
         console.log(Abschlussaufgabe.crc2);
-        //Skifahrer
+        //Schildkr�te Sammy
         for (var i = 0; i < 1; i++) {
             turtle[i] = new Abschlussaufgabe.Turtle(0, 50);
         }
@@ -21,6 +21,7 @@ var Abschlussaufgabe;
     }
     function animate() {
         console.log("Timeout");
+        Abschlussaufgabe.crc2.putImageData(imgData, 0, 0); //Hintergrund restaurieren
         //Schildkr�te
         for (var i = 0; i < turtle.length; i++) {
             var s = turtle[i];

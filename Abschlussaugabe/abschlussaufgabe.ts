@@ -1,6 +1,5 @@
 namespace Abschlussaufgabe {
     //  EventListener hört auf load,Seite wird vollständig geladen.Wenn Ereignis eintritt, beginnt Funktion
-
     window.addEventListener("load", draw);
     export let crc2: CanvasRenderingContext2D;
 
@@ -16,7 +15,7 @@ namespace Abschlussaufgabe {
         crc2 = canvas.getContext("2d");
         console.log(crc2);
 
-        //Skifahrer
+        //Schildkröte Sammy
         for (let i: number = 0; i < 1; i++) {
             turtle[i] = new Turtle(0, 50);
 
@@ -32,6 +31,7 @@ namespace Abschlussaufgabe {
 
     function animate(): void {
         console.log("Timeout");
+        crc2.putImageData(imgData, 0, 0); //Hintergrund restaurieren
 
 
 
