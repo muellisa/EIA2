@@ -9,8 +9,6 @@ var Abschlussaufgabe;
         __extends(Ship, _super);
         function Ship(_x, _y) {
             _super.call(this, _x, _y);
-            this.x = _x;
-            this.y = _y;
             this.dx = 5 + Math.random() * 1;
             this.dy = 1 + Math.random();
         }

@@ -87,12 +87,12 @@ namespace Abschlussaufgabe {
         crc2.putImageData(imgData, 0, 0); //Hintergrund restaurieren
 
 
-       for (let i: number = 0; i < objects.length; i++) {
+        for (let i: number = 0; i < objects.length; i++) {
             let s: MovingObjects = objects[i];
             s.update();
         }
-            window.setTimeout(animate, 300); //Alle 65ms startet Funktion sich selbst neu*/
+        window.setTimeout(animate, 300); //Alle 65ms startet Funktion sich selbst neu*/
 
-        }
     }
+}
 

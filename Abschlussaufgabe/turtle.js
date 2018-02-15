@@ -1,13 +1,18 @@
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
 /* Name:Isabell M�ller
      Matrikel:256034
      
      Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und nicht diktiert. */
 var Abschlussaufgabe;
 (function (Abschlussaufgabe) {
-    var Turtle = (function () {
+    var Turtle = (function (_super) {
+        __extends(Turtle, _super);
         function Turtle(_x, _y) {
-            this.x = _x;
-            this.y = _y;
+            _super.call(this, _x, _y);
             this.dx = 5 + Math.random() * 1;
             this.dy = 1 + Math.random();
         }
@@ -111,7 +116,7 @@ var Abschlussaufgabe;
             Abschlussaufgabe.crc2.fill();
         };
         return Turtle;
-    }());
+    }(Abschlussaufgabe.MovingObjects));
     Abschlussaufgabe.Turtle = Turtle;
 })(Abschlussaufgabe || (Abschlussaufgabe = {}));
 //# sourceMappingURL=turtle.js.map
