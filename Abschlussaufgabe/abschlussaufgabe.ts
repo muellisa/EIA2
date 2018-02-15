@@ -1,5 +1,5 @@
 namespace Abschlussaufgabe {
-    //  EventListener hört auf load,Seite wird vollständig geladen.Wenn Ereignis eintritt, beginnt Funktion
+    //  EventListener hÃ¶rt auf load,Seite wird vollstÃ¤ndig geladen.Wenn Ereignis eintritt, beginnt Funktion
     window.addEventListener("load", draw);
     export let crc2: CanvasRenderingContext2D;
     let objects: MovingObjects[] = [];
@@ -7,10 +7,14 @@ namespace Abschlussaufgabe {
     
     let imgData: ImageData;
     var image: HTMLImageElement;
+   
     /* ----------------------------------------
        ---------------------------------------
        ---------------------------------------*/
-    // Funktion für den Canvas
+    
+      
+   
+    // Funktion fÃ¼r den Canvas
     function draw(): void {
 
         let canvas: HTMLCanvasElement = document.getElementsByTagName("canvas")[0];
@@ -23,8 +27,9 @@ namespace Abschlussaufgabe {
         image = <HTMLImageElement>document.getElementById('background');
         crc2.drawImage(image, 0, 0); // Parameter: Bildreferenz, x, y
 
-        alert(" Sammy die Schildkröte ist neu im Riff. Hilf ihm seine Umgebung zu entdecken!");
-
+        alert(" Sammy die SchildkrÃ¶te ist neu im Riff. Hilf ihm seine Umgebung zu entdecken!");
+        
+        
         //Riff
         crc2.beginPath();
         crc2.arc(780, 35, 80, 0, 2 * Math.PI);
@@ -56,7 +61,7 @@ namespace Abschlussaufgabe {
 
 
 
-        //Schildkröte Sammy
+        //SchildkrÃ¶te Sammy
         for (let i: number = 0; i < 1; i++) {
             let tu: Turtle = new Turtle(0, 50);
             objects.push(tu);
@@ -94,5 +99,14 @@ namespace Abschlussaufgabe {
         window.setTimeout(animate, 300); //Alle 65ms startet Funktion sich selbst neu*/
 
     }
+    
+     function ClickHandler(e: ClickEvent): void {
+
+        
+        if (!fKeyDown && (e.charCode == 87 || e.charCode == 119)) {
+            console.log("W pressed fï¿½r Start Geschichte");
+
+            alert("Einleitung");
+            //Geschichte Einleitung Reisse Fridolin
 }
 
