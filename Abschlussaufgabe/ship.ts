@@ -19,7 +19,7 @@ namespace Abschlussaufgabe {
         }
 
         move(): void {
-            if (this.x > 400) {
+            if (this.x > 800) {
                 this.x = 0;
                 this.y = 5;
             }

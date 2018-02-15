@@ -18,7 +18,7 @@ var Abschlussaufgabe;
             this.move();
         };
         Ship.prototype.move = function () {
-            if (this.x > 400) {
+            if (this.x > 800) {
                 this.x = 0;
                 this.y = 5;
             }
