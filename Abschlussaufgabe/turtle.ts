@@ -3,13 +3,14 @@
      
      Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und nicht diktiert. */
 namespace Abschlussaufgabe {
-    export class Turtle {
+    export class Turtle extends MovingObjects {
         x: number;
         y: number;
         dx: number;
         dy: number;
 
         constructor(_x: number, _y: number) {
+            super(_x, _y);
             this.x = _x;
             this.y = _y;
             this.dx = 5 + Math.random() * 1;

@@ -75,8 +75,15 @@ namespace Abschlussaufgabe {
         crc2.fill();
 
         crc2.beginPath();
-        crc2.moveTo(303, 15);
-        crc2.lineTo(417, 15);
+        crc2.moveTo(306, 25);
+        crc2.lineTo(414, 25);
+        crc2.strokeStyle = "black";
+        crc2.stroke();
+        crc2.fill();
+        
+        crc2.beginPath();
+        crc2.moveTo(319, 45);
+        crc2.lineTo(400, 45);
         crc2.strokeStyle = "black";
         crc2.stroke();
         crc2.fill();
