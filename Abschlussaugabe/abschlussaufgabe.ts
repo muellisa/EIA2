@@ -39,10 +39,10 @@ namespace Abschlussaufgabe {
         for (let i: number = 0; i < turtle.length; i++) {
             let s: Turtle = turtle[i];
             s.update(); // Move and Draw aufrufen
+            window.setTimeout (animate, 60); //Alle 20ms startet Funktion sich selbst neu*/
 
         }
     }
 
 
-    window.setTimeout(animate, 20); //Alle 20ms startet Funktion sich selbst neu*/
 }

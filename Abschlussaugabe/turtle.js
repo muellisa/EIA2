@@ -8,7 +8,8 @@ var Abschlussaufgabe;
         function Turtle(_x, _y) {
             this.x = _x;
             this.y = _y;
-            this.g = Math.random();
+            this.dx = 5 + Math.random() * 1;
+            this.dy = 1 + Math.random();
         }
         /* this verweist auf die Eigenschaften und Methoden eines Objektes */
         Turtle.prototype.update = function () {
@@ -16,10 +17,12 @@ var Abschlussaufgabe;
             this.move();
         };
         Turtle.prototype.move = function () {
-            if (this.y > 600) {
-                this.y = 0;
+            if (this.x > 800) {
+                this.x = 0;
+                this.y = 20;
             }
-            this.y += this.g;
+            this.x += this.dx;
+            this.y += this.dy;
         };
         Turtle.prototype.draw = function () {
             //Schildkr�te Kopf
