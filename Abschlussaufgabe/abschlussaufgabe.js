@@ -42,6 +42,33 @@ var Abschlussaufgabe;
         Abschlussaufgabe.crc2.arc(460, 580, 90, 0, 2 * Math.PI);
         Abschlussaufgabe.crc2.fillStyle = "gray";
         Abschlussaufgabe.crc2.fill();
+        //Netz
+        Abschlussaufgabe.crc2.beginPath();
+        Abschlussaufgabe.crc2.moveTo(0, 90);
+        Abschlussaufgabe.crc2.lineTo(160, 0);
+        Abschlussaufgabe.crc2.strokeStyle = "white";
+        Abschlussaufgabe.crc2.stroke();
+        Abschlussaufgabe.crc2.fill();
+        Abschlussaufgabe.crc2.beginPath();
+        Abschlussaufgabe.crc2.moveTo(0, 60);
+        Abschlussaufgabe.crc2.lineTo(110, 0);
+        Abschlussaufgabe.crc2.stroke();
+        Abschlussaufgabe.crc2.fill();
+        Abschlussaufgabe.crc2.beginPath();
+        Abschlussaufgabe.crc2.moveTo(0, 30);
+        Abschlussaufgabe.crc2.lineTo(55, 0);
+        Abschlussaufgabe.crc2.stroke();
+        Abschlussaufgabe.crc2.fill();
+        Abschlussaufgabe.crc2.beginPath();
+        Abschlussaufgabe.crc2.moveTo(0, 30);
+        Abschlussaufgabe.crc2.lineTo(30, 74);
+        Abschlussaufgabe.crc2.stroke();
+        Abschlussaufgabe.crc2.fill();
+        Abschlussaufgabe.crc2.beginPath();
+        Abschlussaufgabe.crc2.moveTo(35, 0);
+        Abschlussaufgabe.crc2.lineTo(80, 45);
+        Abschlussaufgabe.crc2.stroke();
+        Abschlussaufgabe.crc2.fill();
         //Schildkröte Sammy
         for (var i = 0; i < 1; i++) {
             var tu = new Abschlussaufgabe.Turtle(0, 50);

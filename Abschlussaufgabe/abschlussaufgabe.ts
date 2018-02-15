@@ -58,6 +58,41 @@ namespace Abschlussaufgabe {
         crc2.fillStyle = "gray";
         crc2.fill();
 
+        //Netz
+        crc2.beginPath();
+        crc2.moveTo(0, 90);
+        crc2.lineTo(160, 0);
+        crc2.strokeStyle = "white";
+        crc2.stroke();
+        crc2.fill();
+
+        crc2.beginPath();
+        crc2.moveTo(0, 60);
+        crc2.lineTo(110, 0);
+        crc2.stroke();
+        crc2.fill();
+
+        crc2.beginPath();
+        crc2.moveTo(0, 30);
+        crc2.lineTo(55, 0);
+        crc2.stroke();
+        crc2.fill();
+        
+        crc2.beginPath();
+        crc2.moveTo(0, 30);
+        crc2.lineTo(30, 74);
+        crc2.stroke();
+        crc2.fill();
+        
+        crc2.beginPath();
+        crc2.moveTo(35, 0);
+        crc2.lineTo(80, 45);
+        crc2.stroke();
+        crc2.fill();
+
+
+
+
 
 
         //Schildkröte Sammy
@@ -98,15 +133,15 @@ namespace Abschlussaufgabe {
         window.setTimeout(animate, 300); //Alle 65ms startet Funktion sich selbst neu*/
 
     }
-/*
-    function ClickHandler(e: ClickEvent): void {
+    /*
+        function ClickHandler(e: ClickEvent): void {
+    
+    
+            if (!fKeyDown && (e.charCode == 87 || e.charCode == 119)) {
+                console.log("W pressed f�r Start Geschichte");
+    
+                alert("D");
+                //Geschnleitung Reisse Fridolin*/
 
-
-        if (!fKeyDown && (e.charCode == 87 || e.charCode == 119)) {
-            console.log("W pressed f�r Start Geschichte");
-
-            alert("Einleitung");
-            //Geschichte Einleitung Reisse Fridolin*/
-        
-    }
+}
 
