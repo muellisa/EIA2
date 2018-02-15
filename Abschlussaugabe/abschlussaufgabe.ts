@@ -6,9 +6,9 @@ namespace Abschlussaufgabe {
     let turtle: Turtle[] = [];
     let imgData: ImageData;
     var image: HTMLImageElement;
-    /* ----------------------------------------
-        ---------------------------------------
-        ---------------------------------------*/
+ /* ----------------------------------------
+    ---------------------------------------
+    ---------------------------------------*/
     // Funktion für den Canvas
     function draw(): void {
 
@@ -22,7 +22,7 @@ namespace Abschlussaufgabe {
         image = <HTMLImageElement>document.getElementById('background');
         crc2.drawImage(image, 0, 0); // Parameter: Bildreferenz, x, y
 
-        alert(" Sammy die Schildkröte ist neu im Riff. Hilf ihm seine Umgebung zu entdecken!")
+        alert(" Sammy die Schildkröte ist neu im Riff. Hilf ihm seine Umgebung zu entdecken!");
 
         //Riff
         crc2.beginPath();
@@ -95,13 +95,13 @@ namespace Abschlussaufgabe {
         animate();
 
     }
-    /* ----------------------------------------
-        ---------------------------------------
-        ---------------------------------------*/
+/* ----------------------------------------
+   ---------------------------------------
+   ---------------------------------------*/
+    
     function animate(): void {
         console.log("Timeout");
         crc2.putImageData(imgData, 0, 0); //Hintergrund restaurieren
-
 
 
         //Schildkröte
@@ -112,6 +112,4 @@ namespace Abschlussaufgabe {
 
         }
     }
-
-
 }

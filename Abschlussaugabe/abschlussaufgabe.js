@@ -6,8 +6,8 @@ var Abschlussaufgabe;
     var imgData;
     var image;
     /* ----------------------------------------
-        ---------------------------------------
-        ---------------------------------------*/
+       ---------------------------------------
+       ---------------------------------------*/
     // Funktion f�r den Canvas
     function draw() {
         var canvas = document.getElementsByTagName("canvas")[0];
@@ -75,8 +75,8 @@ var Abschlussaufgabe;
         animate();
     }
     /* ----------------------------------------
-        ---------------------------------------
-        ---------------------------------------*/
+       ---------------------------------------
+       ---------------------------------------*/
     function animate() {
         console.log("Timeout");
         Abschlussaufgabe.crc2.putImageData(imgData, 0, 0); //Hintergrund restaurieren
