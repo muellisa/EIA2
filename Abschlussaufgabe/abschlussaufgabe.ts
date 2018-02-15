@@ -4,16 +4,15 @@ namespace Abschlussaufgabe {
     export let crc2: CanvasRenderingContext2D;
     let objects: MovingObjects[] = [];
 
-    
+
     let imgData: ImageData;
     var image: HTMLImageElement;
-   
+
     /* ----------------------------------------
        ---------------------------------------
        ---------------------------------------*/
-    
-      
-   
+
+
     // Funktion für den Canvas
     function draw(): void {
 
@@ -28,8 +27,8 @@ namespace Abschlussaufgabe {
         crc2.drawImage(image, 0, 0); // Parameter: Bildreferenz, x, y
 
         alert(" Sammy die Schildkröte ist neu im Riff. Hilf ihm seine Umgebung zu entdecken!");
-        
-        
+
+
         //Riff
         crc2.beginPath();
         crc2.arc(780, 35, 80, 0, 2 * Math.PI);
@@ -99,14 +98,15 @@ namespace Abschlussaufgabe {
         window.setTimeout(animate, 300); //Alle 65ms startet Funktion sich selbst neu*/
 
     }
-    
-     function ClickHandler(e: ClickEvent): void {
+/*
+    function ClickHandler(e: ClickEvent): void {
 
-        
+
         if (!fKeyDown && (e.charCode == 87 || e.charCode == 119)) {
             console.log("W pressed f�r Start Geschichte");
 
             alert("Einleitung");
-            //Geschichte Einleitung Reisse Fridolin
-}
+            //Geschichte Einleitung Reisse Fridolin*/
+        
+    }
 

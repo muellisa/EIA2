@@ -1,6 +1,6 @@
 var Abschlussaufgabe;
 (function (Abschlussaufgabe) {
-    //  EventListener h�rt auf load,Seite wird vollst�ndig geladen.Wenn Ereignis eintritt, beginnt Funktion
+    //  EventListener hört auf load,Seite wird vollständig geladen.Wenn Ereignis eintritt, beginnt Funktion
     window.addEventListener("load", draw);
     var objects = [];
     var imgData;
@@ -8,7 +8,7 @@ var Abschlussaufgabe;
     /* ----------------------------------------
        ---------------------------------------
        ---------------------------------------*/
-    // Funktion f�r den Canvas
+    // Funktion für den Canvas
     function draw() {
         var canvas = document.getElementsByTagName("canvas")[0];
         console.log(canvas);
@@ -17,7 +17,7 @@ var Abschlussaufgabe;
         //Hintergrund einbinden
         image = document.getElementById('background');
         Abschlussaufgabe.crc2.drawImage(image, 0, 0); // Parameter: Bildreferenz, x, y
-        alert(" Sammy die Schildkr�te ist neu im Riff. Hilf ihm seine Umgebung zu entdecken!");
+        alert(" Sammy die Schildkröte ist neu im Riff. Hilf ihm seine Umgebung zu entdecken!");
         //Riff
         Abschlussaufgabe.crc2.beginPath();
         Abschlussaufgabe.crc2.arc(780, 35, 80, 0, 2 * Math.PI);
@@ -42,7 +42,7 @@ var Abschlussaufgabe;
         Abschlussaufgabe.crc2.arc(460, 580, 90, 0, 2 * Math.PI);
         Abschlussaufgabe.crc2.fillStyle = "gray";
         Abschlussaufgabe.crc2.fill();
-        //Schildkr�te Sammy
+        //Schildkröte Sammy
         for (var i = 0; i < 1; i++) {
             var tu = new Abschlussaufgabe.Turtle(0, 50);
             objects.push(tu);
