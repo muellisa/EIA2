@@ -6,32 +6,30 @@ namespace Abschlussaufgabe {
     export class Turtle {
         x: number;
         y: number;
-        dx: number;
-        dy: number;
+        g: number;
 
 
         constructor(_x: number, _y: number) {
             this.x = _x;
             this.y = _y;
-            this.dx = 3 + Math.random() * 3;
-            this.dy = 2 + Math.random();
+            this.g = Math.random();
         }
 
         /* this verweist auf die Eigenschaften und Methoden eines Objektes */
         update(): void {
-            this.move();
             this.draw();
+            this.move();
         }
 
         move(): void {
-            if (this.x > 800) {
-                this.x = 0;
-                this.y = 50;
+            if (this.y > 600) {
+                this.y = 0;
             }
-
-            this.x += this.dx;
-            this.y += this.dy;
+            this.y += this.g;
         }
+
+
+
 
         draw(): void {
 
