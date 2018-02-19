@@ -146,7 +146,7 @@ namespace Abschlussaufgabe {
     function RiffClick(): void {
         RiffHit++;
         if (RiffHit >= 1) {
-            alert("Autsch!,das Riff ist ganz schön spitz und piekst!");
+            alert("Autsch!Das Riff ist ganz schön spitz und piekst!");
         }
     }
 
