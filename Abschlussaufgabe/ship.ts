@@ -33,10 +33,6 @@ namespace Abschlussaufgabe {
             }
         }
 
-
-
-
-
         draw(): void {
 
             //Boot

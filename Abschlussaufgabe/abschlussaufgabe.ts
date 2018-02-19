@@ -97,10 +97,6 @@ namespace Abschlussaufgabe {
         crc2.fill();
 
 
-
-
-
-
         //Schildkröte Sammy
         for (let i: number = 0; i < 1; i++) {
             let tu: Turtle = new Turtle(0, 50);
