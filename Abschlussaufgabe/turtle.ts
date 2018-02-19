@@ -1,4 +1,4 @@
-/* Name:Isabell Müller
+/* Name:Isabell MÃ¼ller
      Matrikel:256034
      
      Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und nicht diktiert. */
@@ -38,7 +38,7 @@ namespace Abschlussaufgabe {
 
         draw(): void {
 
-            //Schildkröte Kopf
+            //SchildkrÃ¶te Kopf
             crc2.beginPath();
             crc2.arc(this.x + 60, this.y + 50, 30, 0, 2 * Math.PI);
             crc2.fillStyle = "green";
@@ -70,7 +70,7 @@ namespace Abschlussaufgabe {
             crc2.fillStyle = "lightgreen";
             crc2.fill();
 
-            //Schildkröte Augen
+            //Schildkrï¿½te Augen
             //links
             crc2.beginPath();
             crc2.arc(this.x + 50, this.y + 50, 8, 0, 2 * Math.PI);
@@ -103,7 +103,7 @@ namespace Abschlussaufgabe {
             crc2.fill();
 
 
-            //Schildkröte Körper
+            //Schildkrï¿½te Kï¿½rper
             crc2.beginPath();
             crc2.arc(this.x + 40, this.y + 88, 20, 0, 2 * Math.PI);
             crc2.fillStyle = "green";
@@ -129,7 +129,7 @@ namespace Abschlussaufgabe {
             crc2.fillStyle = "brown";
             crc2.fill();
 
-            //Schildkröte Floss    
+            //Schildkrï¿½te Floss    
             crc2.beginPath();
             crc2.arc(this.x + 60, this.y + 85, 13, 0, 1 * Math.PI);
             crc2.fillStyle = "#142511";

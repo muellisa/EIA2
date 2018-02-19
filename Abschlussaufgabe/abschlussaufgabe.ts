@@ -7,6 +7,9 @@ namespace Abschlussaufgabe {
 
     let imgData: ImageData;
     var image: HTMLImageElement;
+    let ShipHit: number = 0;
+    let NetHit: number = 0;
+
 
     /* ----------------------------------------
        ---------------------------------------
@@ -28,6 +31,9 @@ namespace Abschlussaufgabe {
 
         alert(" Sammy die Schildkröte ist neu im Riff. Hilf ihm seine Umgebung zu entdecken!");
 
+
+        document.getElementById("ShipHitBox").addEventListener("click", ShipClick)
+        document.getElementById("NetHitBox").addEventListener("click", NetClick)
 
         //Riff
         crc2.beginPath();
@@ -77,13 +83,13 @@ namespace Abschlussaufgabe {
         crc2.lineTo(55, 0);
         crc2.stroke();
         crc2.fill();
-        
+
         crc2.beginPath();
         crc2.moveTo(0, 30);
         crc2.lineTo(30, 74);
         crc2.stroke();
         crc2.fill();
-        
+
         crc2.beginPath();
         crc2.moveTo(35, 0);
         crc2.lineTo(80, 45);
@@ -120,6 +126,19 @@ namespace Abschlussaufgabe {
     /* ----------------------------------------
        ---------------------------------------
        -----------------------------------*/
+    function ShipClick(): void {
+        ShipHit++;
+        if (ShipHit == 1) {
+            alert(" Dies ist ein Schiff, dort sind Menschen. Ihnen musst du mit Vorsicht begegnen!");
+        }
+    }
+
+    function NetClick(): void {
+        NetHit++;
+        if (NetHit == 1) {
+            alert(" Nimm dich in Acht! Pass auf und verfange dich nicht im Fischernetz!!");
+        }
+    }
 
     function animate(): void {
         console.log("Timeout");

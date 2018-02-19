@@ -3,7 +3,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-/* Name:Isabell M�ller
+/* Name:Isabell Müller
      Matrikel:256034
      
      Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und nicht diktiert. */
@@ -30,7 +30,7 @@ var Abschlussaufgabe;
             this.y += this.dy;
         };
         Turtle.prototype.draw = function () {
-            //Schildkr�te Kopf
+            //Schildkröte Kopf
             Abschlussaufgabe.crc2.beginPath();
             Abschlussaufgabe.crc2.arc(this.x + 60, this.y + 50, 30, 0, 2 * Math.PI);
             Abschlussaufgabe.crc2.fillStyle = "green";

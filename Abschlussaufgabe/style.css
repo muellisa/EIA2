@@ -1,0 +1,16 @@
+#ShipHitBox {
+	width: 14vw;
+	height: 8vw;
+	position: absolute;
+	top: 0vw;
+	left: 34vw;
+}
+
+#NetHitBox {
+	width: 20vw;
+	height: 10vw;
+	position: absolute;
+	top: -3vw;
+	left: -3vw;
+	transform: rotate(-30deg);
+}

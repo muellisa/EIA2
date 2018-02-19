@@ -9,8 +9,7 @@ var Abschlussaufgabe;
         __extends(Ship, _super);
         function Ship(_x, _y) {
             _super.call(this, _x, _y);
-            this.dx = 5 + Math.random() * 1;
-            this.dy = 1 + Math.random();
+            this.dx = 1 + Math.random() * 1;
         }
         /* this verweist auf die Eigenschaften und Methoden eines Objektes */
         Ship.prototype.update = function () {
@@ -18,12 +17,14 @@ var Abschlussaufgabe;
             this.move();
         };
         Ship.prototype.move = function () {
-            if (this.x > 800) {
-                this.x = 0;
-                this.y = 5;
+            if (this.x > 580) {
+                this.x = this.endpoint;
+                this.endpoint -= this.dx;
             }
-            this.x += this.dx;
-            this.y += this.dy;
+            if (this.x < 360) {
+                this.x = this.startpoint;
+                this.startpoint += this.dx;
+            }
         };
         Ship.prototype.draw = function () {
             //Boot

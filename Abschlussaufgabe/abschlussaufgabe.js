@@ -5,6 +5,8 @@ var Abschlussaufgabe;
     var objects = [];
     var imgData;
     var image;
+    var ShipHit = 0;
+    var NetHit = 0;
     /* ----------------------------------------
        ---------------------------------------
        ---------------------------------------*/
@@ -18,6 +20,8 @@ var Abschlussaufgabe;
         image = document.getElementById('background');
         Abschlussaufgabe.crc2.drawImage(image, 0, 0); // Parameter: Bildreferenz, x, y
         alert(" Sammy die Schildkröte ist neu im Riff. Hilf ihm seine Umgebung zu entdecken!");
+        document.getElementById("ShipHitBox").addEventListener("click", ShipClick);
+        document.getElementById("NetHitBox").addEventListener("click", NetClick);
         //Riff
         Abschlussaufgabe.crc2.beginPath();
         Abschlussaufgabe.crc2.arc(780, 35, 80, 0, 2 * Math.PI);
@@ -87,6 +91,18 @@ var Abschlussaufgabe;
     /* ----------------------------------------
        ---------------------------------------
        -----------------------------------*/
+    function ShipClick() {
+        ShipHit++;
+        if (ShipHit == 1) {
+            alert(" Dies ist ein Schiff, dort sind Menschen. Ihnen musst du mit Vorsicht begegnen!");
+        }
+    }
+    function NetClick() {
+        NetHit++;
+        if (NetHit == 1) {
+            alert(" Nimm dich in Acht! Pass auf und verfange dich nicht im Fischernetz!!");
+        }
+    }
     function animate() {
         console.log("Timeout");
         Abschlussaufgabe.crc2.putImageData(imgData, 0, 0); //Hintergrund restaurieren
