@@ -28,7 +28,6 @@ namespace Abschlussaufgabe {
             this.x += this.dx;
             this.y -= this.dy;
         }
-
     }
 
     draw(): void {
@@ -68,6 +67,6 @@ namespace Abschlussaufgabe {
         crc2.fill();
 
 
-    }
+    
 }
 }
