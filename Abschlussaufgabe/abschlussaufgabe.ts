@@ -154,7 +154,7 @@ namespace Abschlussaufgabe {
 
     function RockClick(): void {
         RockHit++;
-        if (RockHit >= 1) {
+        if (RockHit = 1) {
             //Fische
             alert("Oh jetzt hast du die Fische aufgemischt.");
             for (let i: number = 0; i < 6; i++) {
