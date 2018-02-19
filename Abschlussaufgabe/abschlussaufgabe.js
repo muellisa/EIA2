@@ -7,6 +7,8 @@ var Abschlussaufgabe;
     var image;
     var ShipHit = 0;
     var NetHit = 0;
+    var RockHit = 0;
+    var RiffHit = 0;
     /* ----------------------------------------
        ---------------------------------------
        ---------------------------------------*/
@@ -22,6 +24,8 @@ var Abschlussaufgabe;
         alert(" Sammy die Schildkröte ist neu im Riff. Hilf ihm seine Umgebung zu entdecken!");
         document.getElementById("ShipHitBox").addEventListener("click", ShipClick);
         document.getElementById("NetHitBox").addEventListener("click", NetClick);
+        document.getElementById("RockHitBox").addEventListener("click", RockClick);
+        document.getElementById("RiffHitBox").addEventListener("click", RiffClick);
         //Riff
         Abschlussaufgabe.crc2.beginPath();
         Abschlussaufgabe.crc2.arc(780, 35, 80, 0, 2 * Math.PI);
@@ -103,6 +107,23 @@ var Abschlussaufgabe;
             alert(" Nimm dich in Acht! Pass auf und verfange dich nicht im Fischernetz!!");
         }
     }
+    function RiffClick() {
+        RiffHit++;
+        if (RiffHit >= 1) {
+            alert("Autsch!,das Riff ist ganz schön spitz und piekst!");
+        }
+    }
+    function RockClick() {
+        RockHit++;
+        if (RockHit >= 1) {
+            //Fische
+            alert("Oh jetzt hast du die Fische aufgemischt.");
+            for (var i = 0; i < 6; i++) {
+                var fi = new Abschlussaufgabe.Fishs(0, 60);
+                objects.push(fi);
+            }
+        }
+    }
     function animate() {
         console.log("Timeout");
         Abschlussaufgabe.crc2.putImageData(imgData, 0, 0); //Hintergrund restaurieren
@@ -110,7 +131,7 @@ var Abschlussaufgabe;
             var s = objects[i];
             s.update();
         }
-        window.setTimeout(animate, 300); //Alle 65ms startet Funktion sich selbst neu*/
+        window.setTimeout(animate, 65); //Alle 65ms startet Funktion sich selbst neu*/
     }
 })(Abschlussaufgabe || (Abschlussaufgabe = {}));
 //# sourceMappingURL=abschlussaufgabe.js.map

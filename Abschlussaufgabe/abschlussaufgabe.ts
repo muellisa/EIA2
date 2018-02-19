@@ -9,6 +9,8 @@ namespace Abschlussaufgabe {
     var image: HTMLImageElement;
     let ShipHit: number = 0;
     let NetHit: number = 0;
+    let RockHit: number = 0;
+    let RiffHit: number = 0;
 
 
     /* ----------------------------------------
@@ -34,6 +36,9 @@ namespace Abschlussaufgabe {
 
         document.getElementById("ShipHitBox").addEventListener("click", ShipClick)
         document.getElementById("NetHitBox").addEventListener("click", NetClick)
+        document.getElementById("RockHitBox").addEventListener("click", RockClick)
+        document.getElementById("RiffHitBox").addEventListener("click", RiffClick)
+
 
         //Riff
         crc2.beginPath();
@@ -112,6 +117,8 @@ namespace Abschlussaufgabe {
 
         }
 
+
+
         //Hintergrund speichern
         imgData = crc2.getImageData(0, 0, canvas.width, canvas.height);
 
@@ -135,6 +142,28 @@ namespace Abschlussaufgabe {
             alert(" Nimm dich in Acht! Pass auf und verfange dich nicht im Fischernetz!!");
         }
     }
+    
+    function RiffClick(): void {
+        RiffHit++;
+        if (RiffHit >= 1) {
+            alert("Autsch!,das Riff ist ganz schön spitz und piekst!");
+        }
+    }
+
+
+
+    function RockClick(): void {
+        RockHit++;
+        if (RockHit >= 1) {
+            //Fische
+            alert("Oh jetzt hast du die Fische aufgemischt.");
+            for (let i: number = 0; i < 6; i++) {
+                let fi: Fishs = new Fishs(0, 60);
+                objects.push(fi);
+
+            }
+        }
+    }
 
     function animate(): void {
         console.log("Timeout");
@@ -145,18 +174,9 @@ namespace Abschlussaufgabe {
             let s: MovingObjects = objects[i];
             s.update();
         }
-        window.setTimeout(animate, 300); //Alle 65ms startet Funktion sich selbst neu*/
+        window.setTimeout(animate, 65); //Alle 65ms startet Funktion sich selbst neu*/
 
     }
-    /*
-        function ClickHandler(e: ClickEvent): void {
-    
-    
-            if (!fKeyDown && (e.charCode == 87 || e.charCode == 119)) {
-                console.log("W pressed f�r Start Geschichte");
-    
-                alert("D");
-                //Geschnleitung Reisse Fridolin*/
 
 }
 

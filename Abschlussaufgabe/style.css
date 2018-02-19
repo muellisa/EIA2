@@ -14,3 +14,20 @@
 	left: -3vw;
 	transform: rotate(-30deg);
 }
+
+#RockHitBox {
+	width: 20vw;
+	height: 13vw;
+	position: absolute;
+	top: 55vw;
+	left: 42vw;
+}
+
+#RiffHitBox {
+	width: 46vw;
+	height: 20vw;
+	position: absolute;
+	top: 54vw;
+	left: -6vw;
+	transform: rotate(26deg);
+}
