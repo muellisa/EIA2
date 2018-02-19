@@ -150,8 +150,6 @@ namespace Abschlussaufgabe {
         }
     }
 
-
-
     function RockClick(): void {
         RockHit++;
         if (RockHit <= 1) {
