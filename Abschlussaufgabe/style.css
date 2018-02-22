@@ -1,37 +1,117 @@
-
-
-@media screen and (min-width: 1024px) {
-		
 #ShipHitBox {
-	width: 14vw;
-	height: 8vw;
 	position: absolute;
-	top: 0vw;
-	left: 34vw;
 }
 
 #NetHitBox {
-	width: 20vw;
-	height: 10vw;
 	position: absolute;
-	top: -3vw;
-	left: -3vw;
-	transform: rotate(-30deg);
 }
 
 #RockHitBox {
-	width: 20vw;
-	height: 13vw;
 	position: absolute;
-	top: 55vw;
-	left: 42vw;
 }
 
 #RiffHitBox {
-	width: 46vw;
-	height: 20vw;
 	position: absolute;
-	top: 54vw;
-	left: -6vw;
-	transform: rotate(26deg);
-}}
+}
+
+canvas {
+	width: 100%;
+}
+/*  Smartphoneansicht */
+@media screen and (max-width:570px) {
+	#ShipHitBox {
+		width: 15vw;
+		height: 8vw;
+		top: 1vw;
+		left: 38vw;
+	}
+	#NetHitBox {
+		width: 22vw;
+		height: 10vw;
+		top: -1vw;
+		left: -2vw;
+		transform: rotate(-30deg);
+	}
+	#RockHitBox {
+		width: 22vw;
+		height: 14vw;
+		top: 61vw;
+		left: 46vw;
+	}
+	#RiffHitBox {
+		width: 50vw;
+		height: 20vw;
+		top: 60vw;
+		left: -5vw;
+		transform: rotate(26deg);
+	}
+}
+
+/* Definiert den Seiten Aufbau bei einer Bildschirmansicht >= 36em   Tablet Portrait */
+@media screen and (min-width:571px) {
+	#ShipHitBox {
+		width: 15vw;
+		height: 8vw;
+		top: 1vw;
+		left: 38vw;
+	}
+	#NetHitBox {
+		width: 22vw;
+		height: 10vw;
+		top: -2vw;
+		left: -2vw;
+		transform: rotate(-30deg);
+	}
+	#RockHitBox {
+		width: 22vw;
+		height: 14vw;
+		top: 61vw;
+		left: 46vw;
+	}
+	#RiffHitBox {
+		width: 52vw;
+		height: 22vw;
+		top: 60vw;
+		left: -6vw;
+		transform: rotate(27deg);
+	}
+}
+
+/* Definiert den Seiten Aufbau bei einer Bildschirmansicht >= 48 em   Tablet Landscape*/
+@media screen and (min-width:768px) {
+	canvas {
+		width: 75%;
+	}
+	#ShipHitBox {
+		width: 12vw;
+		height: 7vw;
+		top: 0vw;
+		left: 28vw;
+	}
+	#NetHitBox {
+		width: 20vw;
+		height: 8vw;
+		top: -3vw;
+		left: -3vw;
+	}
+	#RockHitBox {
+		width: 17vw;
+		height: 12vw;
+		top: 46vw;
+		left: 35vw;
+	}
+	#RiffHitBox {
+		width: 46vw;
+		height: 18vw;
+		top: 47vw;
+		left: -6vw;
+	}
+}
+
+
+/* Desktopansicht*/
+@media screen and (min-width: 1024px) {
+	
+	/* siehe Tablet Landscape */
+
+	}
