@@ -1,15 +1,14 @@
 namespace Abschlussaufgabe {
     export class Ship extends MovingObjects {
 
-        dx: number;
+        
        
        
 
         constructor(_x: number, _y: number) {
             super(_x, _y);
 
-            this.dx = 1 + Math.random() * 1;
-
+            
 
         }
 

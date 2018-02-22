@@ -9,7 +9,6 @@ var Abschlussaufgabe;
         __extends(Ship, _super);
         function Ship(_x, _y) {
             _super.call(this, _x, _y);
-            this.dx = 1 + Math.random() * 1;
         }
         /* this verweist auf die Eigenschaften und Methoden eines Objektes */
         Ship.prototype.update = function () {
