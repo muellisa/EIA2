@@ -1,3 +1,7 @@
+
+
+@media screen and (min-width: 1024px) {
+		
 #ShipHitBox {
 	width: 14vw;
 	height: 8vw;
@@ -30,4 +34,4 @@
 	top: 54vw;
 	left: -6vw;
 	transform: rotate(26deg);
-}
+}}

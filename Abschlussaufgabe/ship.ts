@@ -2,8 +2,7 @@ namespace Abschlussaufgabe {
     export class Ship extends MovingObjects {
 
         dx: number;
-        startpoint: number;
-        endpoint: number;
+       
        
 
         constructor(_x: number, _y: number) {
@@ -17,20 +16,7 @@ namespace Abschlussaufgabe {
         /* this verweist auf die Eigenschaften und Methoden eines Objektes */
         update(): void {
             this.draw();
-            this.move();
-        }
-
-        move(): void {
-            if (this.x > 580) {
-                this.x = this.endpoint;
-                this.endpoint -= this.dx;
-            }
-
-            if (this.x < 360) {
-                this.x = this.startpoint;
-                this.startpoint += this.dx;
-
-            }
+            
         }
 
         draw(): void {

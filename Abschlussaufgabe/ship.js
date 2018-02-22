@@ -14,17 +14,6 @@ var Abschlussaufgabe;
         /* this verweist auf die Eigenschaften und Methoden eines Objektes */
         Ship.prototype.update = function () {
             this.draw();
-            this.move();
-        };
-        Ship.prototype.move = function () {
-            if (this.x > 580) {
-                this.x = this.endpoint;
-                this.endpoint -= this.dx;
-            }
-            if (this.x < 360) {
-                this.x = this.startpoint;
-                this.startpoint += this.dx;
-            }
         };
         Ship.prototype.draw = function () {
             //Boot
